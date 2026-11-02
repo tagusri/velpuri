@@ -1,0 +1,752 @@
+
+/* =========================================================
+   CRAZY CRAVINGS - BOOKING PAGE FULL CSS
+   Booking Form + Successful Booking Details Table
+   White Background | Yellow Borders | Brown Buttons
+   ========================================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --yellow: #f2c400;
+    --brown: #6b3516;
+    --dark-brown: #4a220d;
+    --black: #171717;
+    --white: #ffffff;
+    --gray: #666666;
+    --light-yellow: #fffbea;
+    --light-gray: #f8f8f8;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.booking-header {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: var(--white);
+    border-bottom: 2px solid var(--yellow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.crazy {
+    color: var(--brown);
+}
+
+.cravings {
+    color: var(--yellow);
+    text-shadow: 0.4px 0.4px var(--dark-brown);
+}
+
+.home-button {
+    display: inline-block;
+    padding: 9px 23px;
+    background: var(--brown);
+    color: var(--white);
+    border: 2px solid var(--dark-brown);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.home-button:hover {
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.booking-container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+/* ================= PAGE HEADING ================= */
+
+.page-heading {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.small-heading {
+    color: var(--brown);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.page-heading h1 {
+    color: var(--brown);
+    font-size: clamp(30px, 5vw, 43px);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.page-heading p:last-child {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* ================= MAIN CONTENT BOXES ================= */
+
+.booking-card,
+.confirmation-card,
+.feedback-card {
+    width: 100%;
+    padding: clamp(20px, 4vw, 38px);
+    margin-bottom: 35px;
+    background: var(--white);
+    border: 2px solid var(--yellow);
+    border-radius: 7px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Hide confirmation and feedback until booking is submitted */
+.confirmation-card[hidden],
+.feedback-card[hidden] {
+    display: none !important;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2,
+.confirmation-card h2 {
+    color: var(--brown);
+    font-size: clamp(23px, 3vw, 30px);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.section-heading p:last-child,
+.confirmation-intro {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.form-section-title {
+    color: var(--brown);
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin: 28px 0 20px;
+    border-bottom: 1px solid var(--yellow);
+}
+
+.section-description {
+    color: var(--gray);
+    font-size: 13px;
+    margin: -8px 0 20px;
+}
+
+/* ================= FORM LAYOUT ================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+.form-group label {
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* INPUTS, SELECTS AND TEXTAREAS */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 14px;
+    color: var(--black);
+    background: var(--white);
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+    opacity: 1;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(242, 196, 0, 0.15);
+}
+
+.form-group small {
+    color: var(--gray);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* ================= TERMS CHECKBOX ================= */
+
+.terms-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.terms-row input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    accent-color: var(--yellow);
+    cursor: pointer;
+}
+
+.terms-row label {
+    color: var(--gray);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ================= BUTTONS ================= */
+
+.submit-button,
+.print-button,
+.secondary-button {
+    display: inline-block;
+    min-height: 45px;
+    padding: 11px 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 2px solid var(--dark-brown);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-button,
+.print-button {
+    background: var(--brown);
+    color: var(--white);
+}
+
+.submit-button:hover,
+.submit-button:focus-visible,
+.print-button:hover,
+.print-button:focus-visible {
+    background: var(--yellow);
+    color: var(--black);
+    border-color: var(--yellow);
+}
+
+.secondary-button {
+    background: var(--white);
+    color: var(--brown);
+    border-color: var(--yellow);
+    margin-left: 10px;
+}
+
+.secondary-button:hover,
+.secondary-button:focus-visible {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.submit-button:active,
+.print-button:active,
+.secondary-button:active {
+    transform: scale(0.98);
+}
+
+/* ================= STATUS MESSAGES ================= */
+
+.message {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.message:empty {
+    display: none;
+}
+
+.success-message {
+    color: #28632c;
+}
+
+.error-message {
+    color: #a12222;
+}
+
+.notice {
+    margin-top: 20px;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   SUCCESSFUL BOOKING CONFIRMATION
+   ========================================================= */
+
+.confirmation-card {
+    text-align: center;
+    scroll-margin-top: 20px;
+    animation: bookingAppear 0.45s ease;
+}
+
+@keyframes bookingAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SUCCESS CIRCLE */
+
+.success-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--yellow);
+    border-radius: 50%;
+    background: var(--light-yellow);
+    color: var(--brown);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.confirmation-card .small-heading {
+    margin-bottom: 8px;
+}
+
+.confirmation-intro {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+/* BOOKING REFERENCE */
+
+.reference-box {
+    max-width: 460px;
+    margin: 25px auto;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: var(--light-yellow);
+    border: 2px solid var(--yellow);
+    border-radius: 5px;
+}
+
+.reference-box span {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.reference-box strong {
+    color: var(--brown);
+    font-size: 27px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+}
+
+.reference-box small {
+    color: var(--gray);
+    font-size: 11px;
+}
+
+/* =========================================================
+   BOOKING SUMMARY TABLE
+   ========================================================= */
+
+.confirmation-details {
+    width: 100%;
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    text-align: left;
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Every detail is displayed as a table cell */
+
+.detail-item {
+    min-width: 0;
+    min-height: 82px;
+    padding: 15px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: var(--white);
+    border-right: 1px solid var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+    overflow-wrap: anywhere;
+}
+
+.detail-item:nth-child(2n) {
+    border-right: none;
+}
+
+.detail-item span {
+    color: var(--gray);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.detail-item strong {
+    color: var(--brown);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Long information uses the full row */
+
+.detail-item.full-detail {
+    grid-column: 1 / -1;
+    border-right: none;
+}
+
+/* BOOKING STATUS */
+
+.confirmation-note {
+    padding: 15px;
+    margin: 20px 0;
+    background: var(--light-yellow);
+    border-left: 4px solid var(--yellow);
+    color: #59431a;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ================= FEEDBACK SECTION ================= */
+
+.feedback-card {
+    scroll-margin-top: 20px;
+}
+
+.feedback-card .section-heading {
+    margin-bottom: 25px;
+}
+
+.feedback-card .form-section-title {
+    margin-top: 25px;
+}
+
+.feedback-card .submit-button {
+    margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+
+.booking-footer {
+    width: 100%;
+    padding: 35px 20px;
+    background: #171717;
+    color: var(--white);
+    text-align: center;
+    border-top: 3px solid var(--yellow);
+}
+
+.booking-footer h3 {
+    color: var(--yellow);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.booking-footer p {
+    margin: 5px 0;
+    color: #eeeeee;
+    font-size: 12px;
+}
+
+.booking-footer .copyright {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #444444;
+    color: #cccccc;
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
+}
+
+/* ================= TABLET RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .booking-header {
+        min-height: 72px;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .booking-container {
+        width: 94%;
+        padding: 35px 0 45px;
+    }
+
+    .booking-card,
+    .confirmation-card,
+    .feedback-card {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .detail-item {
+        padding: 13px;
+    }
+
+    .detail-item strong {
+        font-size: 13px;
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+    .booking-header {
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+        gap: 5px;
+    }
+
+    .home-button {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+
+    .booking-container {
+        width: 94%;
+        padding-top: 28px;
+    }
+
+    .page-heading h1 {
+        font-size: 29px;
+    }
+
+    .page-heading p:last-child {
+        font-size: 13px;
+    }
+
+    .booking-card,
+    .confirmation-card,
+    .feedback-card {
+        padding: 19px 13px;
+    }
+
+    .section-heading h2,
+    .confirmation-card h2 {
+        font-size: 22px;
+    }
+
+    .form-section-title {
+        font-size: 16px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 12px;
+    }
+
+    .confirmation-details {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-item,
+    .detail-item:nth-child(2n) {
+        min-height: 70px;
+        padding: 12px 14px;
+        border-right: none;
+    }
+
+    .detail-item.full-detail {
+        grid-column: auto;
+    }
+
+    .reference-box {
+        padding: 17px 12px;
+    }
+
+    .reference-box strong {
+        font-size: 22px;
+    }
+
+    .submit-button,
+    .print-button,
+    .secondary-button {
+        width: 100%;
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .secondary-button {
+        margin: 12px 0 0;
+    }
+
+    .booking-footer {
+        padding: 28px 15px;
+    }
+}
+
+/* ================= PRINT BOOKING DETAILS ================= */
+
+@media print {
+    body {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .booking-header,
+    .page-heading,
+    .booking-card,
+    .feedback-card,
+    .booking-footer,
+    .print-button,
+    .secondary-button {
+        display: none !important;
+    }
+
+    .booking-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .confirmation-card,
+    .confirmation-card[hidden] {
+        display: block !important;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        border: 1px solid #999999;
+        box-shadow: none;
+        animation: none;
+    }
+
+    .confirmation-details {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-color: #999999;
+    }
+
+    .detail-item,
+    .detail-item:nth-child(2n) {
+        border-color: #999999;
+        break-inside: avoid;
+    }
+
+    .detail-item span,
+    .detail-item strong,
+    .reference-box strong {
+        color: #000000;
+    }
+
+    .reference-box,
+    .confirmation-note {
+        background: #ffffff;
+        border-color: #999999;
+        color: #000000;
+    }
+}
+

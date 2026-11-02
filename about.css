@@ -1,0 +1,1605 @@
+
+/* =========================================================
+CRAZY CRAVINGS - ABOUT CSS
+NO FULL PAGE BORDER
+YELLOW BORDER AROUND EVERY IMAGE
+NO GAP AROUND IMAGES
+MEDIUM LOGIN BUTTON
+ACTIVE NAVBAR UNDERLINE STAYS ON CURRENT PAGE
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #111111;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+PAGE FRAME
+NO OUTER BORDER
+========================================================= */
+
+.page-frame {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+/* =========================================================
+HEADER
+FIXED AT TOP WHILE PAGE SCROLLS
+========================================================= */
+
+.header {
+  width: 100%;
+  min-height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 28px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+}
+
+/* =========================================================
+LOGO
+========================================================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo i {
+  color: #f2c400;
+  font-size: 28px;
+  margin-right: 4px;
+}
+
+.crazy {
+  color: #f2c400;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.cravings {
+  color: #111111;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* =========================================================
+DESKTOP NAVBAR
+========================================================= */
+
+.desktop-navbar {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.desktop-navbar > a:not(.login-button) {
+  position: relative;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  padding: 8px 0;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================================
+NAVBAR HOVER
+HOVER CHANGES COLOR ONLY
+========================================================= */
+
+.desktop-navbar > a:not(.login-button):hover {
+  color: #f2c400;
+}
+
+/* =========================================================
+NAVBAR UNDERLINE
+DEFAULT = NO UNDERLINE
+========================================================= */
+
+.desktop-navbar > a:not(.login-button)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: #f2c400;
+
+  transition: width 0.3s ease;
+}
+
+/* =========================================================
+HOVER UNDERLINE
+ONLY TEMPORARY FOR NON-ACTIVE LINK
+========================================================= */
+
+.desktop-navbar > a:not(.login-button):not(.active):hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+ACTIVE CURRENT PAGE
+THIS UNDERLINE ALWAYS STAYS
+========================================================= */
+
+.desktop-navbar > a.active:not(.login-button) {
+  color: #f2c400;
+}
+
+/* ACTIVE UNDERLINE */
+
+.desktop-navbar > a.active:not(.login-button)::after {
+  width: 100%;
+}
+
+/* =========================================================
+IMPORTANT ACTIVE PAGE BEHAVIOUR
+
+When cursor moves to another navbar link:
+the current page underline DOES NOT disappear.
+
+Example:
+Home page = Home has .active
+
+Cursor on About:
+About gets temporary hover underline.
+Home keeps its permanent active underline.
+
+Cursor leaves About:
+About underline disappears.
+Home underline remains.
+
+========================================================= */
+
+/* =========================================================
+LOGIN BUTTON
+MEDIUM SIZE
+BROWN FIRST
+YELLOW ON HOVER / CLICK
+========================================================= */
+
+.desktop-navbar .login-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+   min-width: 93px;
+  height: 45px;
+  padding: 0.14px;
+  background: #6b3516;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  border: 2px solid #4a220d;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+HUMAN ICON
+========================================================= */
+
+.desktop-navbar .login-button i {
+  color: #ffffff;
+
+  font-size: 17px;
+
+  transition: 0.3s ease;
+}
+
+/* =========================================================
+LOGIN HOVER
+========================================================= */
+
+.desktop-navbar .login-button:hover {
+  background: #f2c400;
+
+  color: #000000;
+
+  border-color: #f2c400;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+.desktop-navbar .login-button:hover i {
+  color: #000000;
+}
+
+/* =========================================================
+LOGIN CLICK
+========================================================= */
+
+.desktop-navbar .login-button:active {
+  background: #f2c400;
+
+  color: #000000;
+
+  border-color: #f2c400;
+}
+
+.desktop-navbar .login-button:active i {
+  color: #000000;
+}
+
+/* =========================================================
+MOBILE THREE LINE BUTTON
+========================================================= */
+
+.menu-button {
+  display: none;
+
+  width: 42px;
+  height: 38px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.menu-button span {
+  display: block;
+
+  width: 27px;
+  height: 3px;
+
+  background: #6b3516;
+
+  border-radius: 2px;
+
+  transition: 0.3s ease;
+}
+
+/* =========================================================
+MOBILE BUTTON ACTIVE
+========================================================= */
+
+.menu-button.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================================
+MOBILE NAVBAR
+========================================================= */
+
+.mobile-nav {
+  display: none;
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 2px solid #f2c400;
+
+  padding: 20px;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.mobile-nav a {
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  position: relative;
+
+  padding: 5px 0;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================================
+MOBILE HOVER
+========================================================= */
+
+.mobile-nav a:hover {
+  color: #f2c400;
+}
+
+/* =========================================================
+MOBILE ACTIVE CURRENT PAGE
+========================================================= */
+
+.mobile-nav a.active {
+  color: #f2c400;
+}
+
+.mobile-nav a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  background: #f2c400;
+}
+
+/* =========================================================
+MOBILE LOGIN BUTTON
+========================================================= */
+
+.mobile-nav .login-btn {
+  width: 140px;
+
+  padding: 11px 20px;
+
+  text-align: center;
+
+  background: #6b3516;
+
+  color: #ffffff;
+
+  border: 2px solid #4a220d;
+
+  border-radius: 5px;
+}
+
+.mobile-nav .login-btn:hover {
+  background: #f2c400;
+
+  color: #000000;
+
+  border-color: #f2c400;
+}
+
+/* =========================================================
+MAIN
+========================================================= */
+
+main {
+  width: 100%;
+}
+
+/* =========================================================
+ABOUT MAIN SECTION
+========================================================= */
+
+.about-main {
+  width: 100%;
+
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 80px 7%;
+}
+
+/* =========================================================
+EVERY IMAGE CONTAINER
+FULL YELLOW BORDER
+NO GAP
+========================================================= */
+
+.food-image-box,
+.food-decoration,
+.philosophy-image,
+.card-image,
+.spices-image,
+.experience-image {
+  border: 3px solid #f2c400;
+
+  padding: 0;
+
+  margin: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+EVERY IMAGE
+========================================================= */
+
+.food-image-box img,
+.food-decoration img,
+.philosophy-image img,
+.card-image img,
+.spices-image img,
+.experience-image img {
+  display: block;
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  box-shadow: none;
+}
+
+/* =========================================================
+ABOUT IMAGE
+========================================================= */
+
+.about-image-area {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.food-image-box {
+  width: 100%;
+
+  max-width: 560px;
+}
+
+.food-image-box img {
+  height: 500px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+ABOUT CONTENT
+========================================================= */
+
+.about-content {
+  width: 100%;
+
+  max-width: 600px;
+}
+
+.small-title {
+  color: #f2c400;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.about-content h1 {
+  font-size: 52px;
+
+  line-height: 1.1;
+
+  color: #111111;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.gold-line {
+  width: 75px;
+
+  height: 4px;
+
+  background: #f2c400;
+
+  margin-bottom: 25px;
+}
+
+.about-content > p:not(.small-title) {
+  color: #555555;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 17px;
+}
+
+.about-content strong {
+  color: #6b3516;
+}
+
+/* =========================================================
+FOOD DECORATION
+========================================================= */
+
+.food-decoration {
+  width: 100%;
+
+  max-width: 260px;
+
+  margin-top: 25px;
+}
+
+.food-decoration img {
+  height: 160px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+PHILOSOPHY SECTION
+========================================================= */
+
+.philosophy-section {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 90px 7%;
+
+  background: #fffdf7;
+}
+
+/* =========================================================
+PHILOSOPHY IMAGE
+========================================================= */
+
+.philosophy-image {
+  width: 100%;
+}
+
+.philosophy-image img {
+  height: 500px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+PHILOSOPHY CONTENT
+========================================================= */
+
+.philosophy-content {
+  max-width: 600px;
+}
+
+.philosophy-content h2 {
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  color: #111111;
+
+  margin-bottom: 18px;
+}
+
+.philosophy-content h2 span {
+  color: #6b3516;
+}
+
+.philosophy-content > p:not(.small-title) {
+  font-size: 15px;
+
+  color: #555555;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+FEATURE LIST
+========================================================= */
+
+.feature-list {
+  margin-top: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.feature-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+}
+
+.feature-item > i {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f2c400;
+
+  color: #111111;
+
+  border-radius: 50%;
+
+  font-size: 19px;
+}
+
+.feature-item h3 {
+  color: #111111;
+
+  font-size: 18px;
+
+  margin-bottom: 5px;
+}
+
+.feature-item p {
+  color: #666666;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+SPECIAL SECTION
+========================================================= */
+
+.special-section {
+  width: 100%;
+
+  padding: 90px 7%;
+
+  background: #ffffff;
+}
+
+.section-heading {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+  font-size: 45px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  color: #111111;
+
+  margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+  color: #6b3516;
+}
+
+.section-heading p:last-child {
+  color: #666666;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.gold-line.center {
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+/* =========================================================
+SPECIAL GRID
+========================================================= */
+
+.special-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/* =========================================================
+SPECIAL CARD
+========================================================= */
+
+.special-card {
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+
+  overflow: hidden;
+}
+
+.special-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+/* =========================================================
+THREE SPECIAL IMAGES
+FULL YELLOW BORDER
+NO GAP
+========================================================= */
+
+.card-image {
+  width: calc(100% - 14px);
+
+  margin: 7px;
+
+  padding: 0;
+
+  border: 3px solid #f2c400;
+
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+
+  height: 270px;
+
+  display: block;
+
+  object-fit: cover;
+
+  cursor: default;
+
+  transition: none;
+}
+
+.card-image:hover img {
+  transform: none;
+}
+
+/* =========================================================
+CARD CONTENT
+========================================================= */
+
+.card-content {
+  padding: 25px;
+}
+
+.card-content > i {
+  color: #f2c400;
+
+  font-size: 25px;
+
+  margin-bottom: 10px;
+}
+
+.card-content h3 {
+  font-size: 21px;
+
+  color: #111111;
+
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  color: #666666;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* =========================================================
+SPICES SECTION
+========================================================= */
+
+.spices-section {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 90px 7%;
+
+  background: #fffdf7;
+}
+
+.spices-content {
+  max-width: 600px;
+}
+
+.spices-content h2 {
+  color: #111111;
+
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.spices-content h2 span {
+  color: #6b3516;
+}
+
+.spices-content > p:not(.small-title) {
+  color: #555555;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+SPICE ITEMS
+========================================================= */
+
+.spice-items {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.spice-items span {
+  padding: 8px 16px;
+
+  border: 1px solid #6b3516;
+
+  color: #6b3516;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  background: #ffffff;
+
+  transition: 0.3s ease;
+}
+
+.spice-items span:hover {
+  background: #f2c400;
+
+  color: #000000;
+
+  border-color: #f2c400;
+}
+
+/* =========================================================
+SPICES IMAGE
+========================================================= */
+
+.spices-image {
+  width: 100%;
+}
+
+.spices-image img {
+  height: 470px;
+
+  object-fit: cover;
+}
+
+/* =========================================================
+EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 90px 7%;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+EXPERIENCE IMAGE
+========================================================= */
+
+.experience-image {
+  width: 100%;
+}
+
+.experience-image img {
+  height: 480px;
+
+  object-fit: cover;
+}
+
+.experience-content {
+  max-width: 600px;
+}
+
+.experience-content h2 {
+  font-size: 46px;
+
+  line-height: 1.2;
+
+  color: #111111;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.experience-content h2 span {
+  color: #6b3516;
+}
+
+.experience-content > p:not(.small-title) {
+  color: #555555;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 18px;
+}
+
+/* =========================================================
+IMAGE SCROLL ANIMATION
+NO ZOOM
+========================================================= */
+
+.scroll-image {
+  opacity: 0;
+
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.from-left {
+  transform: translateX(-80px);
+}
+
+.from-right {
+  transform: translateX(80px);
+}
+
+.image-visible {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer {
+  width: 100%;
+
+  background: #111;
+
+  color: #fff;
+
+  padding-top: 60px;
+}
+
+/* =========================================================
+FOOTER CONTAINER
+========================================================= */
+
+.footer-container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.3fr 1fr 1fr 1.3fr 1.4fr;
+
+  gap: 35px;
+
+  padding-bottom: 45px;
+}
+
+/* =========================================================
+FOOTER BOX
+========================================================= */
+
+.footer-box {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* =========================================================
+FOOTER HEADINGS
+========================================================= */
+
+.footer-brand h3,
+.footer-box h3,
+.footer-resources h3 {
+  color: #f2c400;
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+
+  margin: 0 0 5px 0;
+}
+
+.footer-box h3 {
+  font-size: 20px;
+
+  margin: 0 0 10px 0;
+}
+
+/* =========================================================
+FOOTER TEXT
+========================================================= */
+
+.footer-box p {
+  color: #ddd;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* =========================================================
+FOOTER LINKS
+========================================================= */
+
+.footer-box a,
+.resource-links a {
+  color: #ddd;
+
+  font-size: 14px;
+
+  text-decoration: none !important;
+
+  border: none;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.footer-box a:hover,
+.resource-links a:hover {
+  color: #f2c400;
+
+  text-decoration: none !important;
+
+  border: none;
+}
+
+/* =========================================================
+FOLLOW US
+========================================================= */
+
+.follow-box {
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* =========================================================
+SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 8px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #aaa;
+
+  border-radius: 50%;
+
+  color: #fff;
+
+  text-decoration: none !important;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 17px;
+}
+
+.social-icons a:hover {
+  color: #f2c400;
+
+  border-color: #f2c400;
+
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover i {
+  color: #f2c400;
+}
+
+/* =========================================================
+FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 22px 0;
+
+  border-top:
+    1px solid rgba(242, 196, 0, 0.35);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
+}
+
+/* =========================================================
+COPYRIGHT
+========================================================= */
+
+.footer-copyright {
+  flex: 1;
+}
+
+.footer-copyright p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+RESOURCES
+========================================================= */
+
+.footer-resources {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  text-align: right;
+}
+
+.footer-resources h3 {
+  font-size: 18px;
+
+  margin: 0 0 10px 0;
+
+  font-weight: 600;
+}
+
+/* =========================================================
+RESOURCE LINKS
+========================================================= */
+
+.resource-links {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 25px;
+
+  white-space: nowrap;
+}
+
+.resource-links a {
+  color: #aaa;
+
+  font-size: 13px;
+
+  text-decoration: none !important;
+}
+
+.resource-links a:hover {
+  color: #f2c400;
+
+  text-decoration: none !important;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .desktop-navbar {
+    gap: 17px;
+  }
+
+  .desktop-navbar > a:not(.login-button) {
+    font-size: 14px;
+  }
+
+  .desktop-navbar .login-button {
+    width: 135px;
+
+    height: 46px;
+
+    font-size: 16px;
+  }
+
+  .desktop-navbar .login-button i {
+    font-size: 16px;
+  }
+
+  .crazy,
+  .cravings {
+    font-size: 27px;
+  }
+
+  .logo i {
+    font-size: 24px;
+  }
+
+  .about-main,
+  .philosophy-section,
+  .spices-section,
+  .experience-section {
+    gap: 45px;
+
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .special-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .header {
+    min-height: 75px;
+
+    padding: 0 18px;
+  }
+
+  .desktop-navbar {
+    display: none;
+  }
+
+  .menu-button {
+    display: flex;
+  }
+
+  .mobile-nav.show-mobile-menu {
+    display: flex;
+  }
+
+  .about-main,
+  .philosophy-section,
+  .spices-section,
+  .experience-section {
+    grid-template-columns: 1fr;
+
+    padding: 65px 7%;
+
+    gap: 50px;
+  }
+
+  .about-content,
+  .philosophy-content,
+  .spices-content,
+  .experience-content {
+    max-width: 100%;
+  }
+
+  .about-content h1,
+  .philosophy-content h2,
+  .spices-content h2,
+  .experience-content h2 {
+    font-size: 40px;
+  }
+
+  .special-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer-resources {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    min-height: 70px;
+
+    padding: 0 13px;
+  }
+
+  .crazy,
+  .cravings {
+    font-size: 22px;
+  }
+
+  .logo i {
+    font-size: 20px;
+  }
+
+  .menu-button {
+    width: 38px;
+  }
+
+  .about-main,
+  .philosophy-section,
+  .spices-section,
+  .experience-section,
+  .special-section {
+    padding: 50px 6%;
+  }
+
+  .about-content h1,
+  .philosophy-content h2,
+  .spices-content h2,
+  .experience-content h2 {
+    font-size: 34px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .food-image-box img,
+  .philosophy-image img {
+    height: 350px;
+  }
+
+  .spices-image img,
+  .experience-image img {
+    height: 330px;
+  }
+
+  .special-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image img {
+    height: 250px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .resource-links {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+}
+
+/* =========================================================
+EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .crazy,
+  .cravings {
+    font-size: 19px;
+  }
+
+  .logo i {
+    font-size: 18px;
+  }
+
+  .about-content h1,
+  .philosophy-content h2,
+  .spices-content h2,
+  .experience-content h2 {
+    font-size: 30px;
+  }
+
+  .small-title {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+  }
+
+  .food-image-box img,
+  .philosophy-image img,
+  .spices-image img,
+  .experience-image img {
+    height: 280px;
+  }
+}
+

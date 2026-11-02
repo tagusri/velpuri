@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crazy Cravings - Login</title>
+
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+
+  <!-- Only correction: make the popup background white -->
+  <style>
+    .popup,
+    .popup-layout,
+    .form-side {
+      background-color: #ffffff !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Restaurant background -->
+  <div class="background-page">
+    <header class="background-header">
+      <a class="background-logo" href="home.html">
+        <span>Crazy</span> <strong>Cravings</strong>
+      </a>
+
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="account-icon" href="login.html" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="7" r="4"></circle>
+          <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
+        </svg>
+        <span class="header-profile-name"></span>
+      </a>
+    </header>
+
+    <main class="background-content">
+      <h1>Welcome to Crazy Cravings</h1>
+      <h2>Delicious Food, Happier Moments</h2>
+      <p>Enjoy delicious food made with fresh ingredients and unforgettable flavours.</p>
+      <img
+        src="egg.webp"
+        alt="Delicious pizza">
+    </main>
+  </div>
+
+  <!-- Blurred overlay -->
+  <div class="blur-overlay"></div>
+
+  <!-- Login and registration popup -->
+  <main class="popup-wrap">
+    <section class="popup" aria-label="Crazy Cravings account">
+
+      <button class="close-btn" id="closePopup" type="button"
+        aria-label="Close">×</button>
+
+      <div class="popup-layout">
+
+        <!-- Left side: existing restaurant images -->
+        <section class="food-side">
+          <img class="main-food"
+            src="egg.webp"
+            alt="Fresh restaurant food">
+
+          <h1>Delicious Food<br>Happier Moments</h1>
+          <div class="gold-line"></div>
+
+          <p>At Crazy Cravings, we bring you fresh ingredients, great taste and unforgettable food experiences.</p>
+
+          <div class="food-gallery">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80" alt="Pizza">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=300&q=80" alt="Pasta">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=300&q=80" alt="Cake">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=300&q=80" alt="Milkshake">
+          </div>
+
+          <div class="features">
+            <span>♡ Fresh Ingredients</span>
+            <span>✦ Great Taste</span>
+            <span>♡ Happy Customers</span>
+          </div>
+        </section>
+
+        <!-- Right side: login form -->
+        <section class="form-side">
+
+          <div class="logo-mark">
+            <span>Crazy</span>
+            <strong>Cravings</strong>
+            <div class="smile"></div>
+          </div>
+
+          <!-- Login view -->
+          <div id="loginView">
+            <div class="user-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
+              </svg>
+            </div>
+
+            <h2>Welcome Back!</h2>
+            <p class="subtitle">Login to continue</p>
+
+            <form id="loginForm">
+              <label for="email">Email ID</label>
+              <input id="email" name="email" type="email"
+                placeholder="Enter your email ID"
+                autocomplete="email" required>
+
+              <label for="password">Password</label>
+              <div class="password-box">
+                <input id="password" name="password" type="password"
+                  placeholder="Enter your password"
+                  autocomplete="current-password" required>
+
+                <button type="button" class="eye-btn"
+                  data-toggle="password" aria-label="Show password">◉</button>
+              </div>
+
+              <div class="options">
+                <label class="remember">
+                  <input type="checkbox" id="remember"> Remember Me
+                </label>
+
+                <a href="forgot-password.html">Forgot Password?</a>
+              </div>
+
+              <p id="loginMessage" class="message" aria-live="polite"></p>
+
+              <button type="submit" class="primary-btn">Login</button>
+            </form>
+
+            <p class="switch-text">
+              Don't have an account?
+              <a href="#register" id="openRegister">Create an account</a>
+            </p>
+
+            <div class="divider"><span>OR</span></div>
+
+            <a href="home.html" class="home-btn">⌂ &nbsp; Go to Home</a>
+          </div>
+
+          <!-- Registration view -->
+          <div id="registerView" hidden>
+            <div class="user-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
+              </svg>
+            </div>
+
+            <h2>Create Account</h2>
+            <p class="subtitle">Join Crazy Cravings today</p>
+
+            <form id="registerForm">
+              <div class="register-grid">
+
+                <div>
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text"
+                    placeholder="First name"
+                    autocomplete="given-name" required>
+                </div>
+
+                <div>
+                  <label for="surname">Surname</label>
+                  <input id="surname" name="surname" type="text"
+                    placeholder="Surname"
+                    autocomplete="family-name" required>
+                </div>
+
+                <div>
+                  <label for="registerEmail">Email ID</label>
+                  <input id="registerEmail" name="email" type="email"
+                    placeholder="Email address"
+                    autocomplete="email" required>
+                </div>
+
+                <div>
+                  <label for="mobile">Mobile Number</label>
+                  <input id="mobile" name="mobile" type="tel"
+                    placeholder="Mobile number"
+                    autocomplete="tel"
+                    pattern="[0-9+() -]{7,20}" required>
+                </div>
+
+                <div>
+                  <label for="birthDay">Date</label>
+                  <select id="birthDay" name="birthDay" required>
+                    <option value="">Day</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="birthMonth">Month</label>
+                  <select id="birthMonth" name="birthMonth" required>
+                    <option value="">Month</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="birthYear">Year</label>
+                  <select id="birthYear" name="birthYear" required>
+                    <option value="">Year</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender" required>
+                    <option value="">Select gender</option>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                    <option>Prefer not to say</option>
+                  </select>
+                </div>
+
+                <div class="full-width">
+                  <label for="registerPassword">Password</label>
+                  <input id="registerPassword" name="password"
+                    type="password" placeholder="Create a password"
+                    autocomplete="new-password" required>
+                </div>
+
+              </div>
+
+              <label class="agreement">
+                <input type="checkbox" id="agreeTerms" required>
+                I confirm that my details are correct.
+              </label>
+
+              <p id="registerMessage" class="message" aria-live="polite"></p>
+
+              <button type="submit" class="primary-btn">
+                Submit Details
+              </button>
+            </form>
+
+            <!-- Success profile -->
+            <section id="profileResult" class="profile-result" hidden>
+              <div class="profile-human">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="7" r="4"></circle>
+                  <path d="M4 21v-2a8 8 0 0 1 16 0v2z"></path>
+                </svg>
+              </div>
+
+              <h2 id="profileName">Your Name</h2>
+              <p>Your details have been submitted successfully!</p>
+
+              <div class="profile-actions">
+                <a href="home.html" class="home-btn">Go to Home</a>
+
+                <button type="button" id="goToLogin"
+                  class="primary-btn">Go to Login</button>
+              </div>
+            </section>
+
+            <p class="switch-text" id="registerSwitch">
+              Already have an account?
+              <a href="#login" id="openLogin">Login here</a>
+            </p>
+          </div>
+
+        </section>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

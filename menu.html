@@ -1,0 +1,2347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crazy Cravings - Menu</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+<div class="page-frame">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <!-- LEFT CORNER : CRAZY CRAVINGS -->
+
+        <a href="home.html" class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <span class="crazy">Crazy</span>
+
+            <span class="cravings">Cravings</span>
+
+        </a>
+
+
+        <!-- RIGHT CORNER : NAVBAR -->
+
+        <nav class="desktop-navbar">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="/menu" class="active">
+                Menu
+            </a>
+
+            <a href="chef.html">
+                Chef
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="booking.html" class="login-button">
+
+                <i class="fa-solid fa-user"></i>
+
+                booking
+
+            </a>
+
+        </nav>
+
+
+        <!-- CART -->
+
+        <a
+            href="#cart"
+            class="top-cart"
+            aria-label="View shopping cart">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span id="topCartCount">
+                0
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE BUTTON -->
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Open Menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE NAVBAR ================= -->
+
+    <nav
+        class="mobile-navbar"
+        id="mobileNavbar">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a
+            href="/menu"
+            class="mobile-active">
+
+            Menu
+
+        </a>
+
+        <a href="chef.html">
+            Chef
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+
+        <a href="booking.html">
+            booking
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-image-box">
+
+            <img
+                src="food.jpg"
+                alt="Crazy Cravings Food"
+                class="clickable-image"
+                onclick="openImage(this.src)">
+
+
+            <div class="hero-content">
+
+                <p>
+                    FRESH FOOD • FRESH INGREDIENTS • DELICIOUS TASTE
+                </p>
+
+                <h1>
+                    Crazy <span>Cravings</span>
+                </h1>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+
+                    Explore Menu
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MENU SECTION ================= -->
+
+    <section
+        class="menu-section"
+        id="menu">
+
+        <div class="section-title">
+
+            <p>
+                OUR SPECIAL MENU
+            </p>
+
+            <h2>
+                Choose Your <span>Favourite</span>
+            </h2>
+
+        </div>
+
+
+        <!-- CATEGORY LINKS -->
+
+        <div class="category-links">
+
+            <a href="#vegetarian">
+                Vegetarian
+            </a>
+
+            <a href="#nonvegetarian">
+                Non-Veg
+            </a>
+
+            <a href="#tiffins">
+                Tiffins
+            </a>
+
+            <a href="#snacks">
+                Snacks
+            </a>
+
+            <a href="#drinks">
+                Cold Drinks
+            </a>
+
+            <a href="#icecreams">
+                Ice Creams
+            </a>
+
+        </div>
+
+
+        <!-- ================= VEGETARIAN ================= -->
+
+        <div
+            class="category"
+            id="vegetarian">
+
+            <div class="category-heading">
+
+                <h3>
+                    Vegetarian
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="fry.rice.jpg"
+                            alt="Veg Fried Rice"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Veg Fried Rice
+                        </h4>
+
+                        <p>
+                            Fresh vegetables cooked with fragrant rice and special spices.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Veg Fried Rice',30,'fry.rice.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹30
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="panner.jpg"
+                            alt="Paneer Tikka"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Paneer Tikka
+                        </h4>
+
+                        <p>
+                            Soft paneer marinated with delicious spices and grilled perfectly.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Paneer Tikka',80,'panner.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹80
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="gobi.jpg"
+                            alt="Veg Biryani"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Veg Biryani
+                        </h4>
+
+                        <p>
+                            Aromatic rice with fresh vegetables, herbs and traditional spices.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Veg Biryani',100,'gobi.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹100
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= NON-VEGETARIAN ================= -->
+
+        <div
+            class="category"
+            id="nonvegetarian">
+
+            <div class="category-heading">
+
+                <h3>
+                    Non-Vegetarian
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="IMG_5297.jpg"
+                            alt="Chicken 65 Fry"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Chicken 65 Fry
+                        </h4>
+
+                        <p>
+                            Crispy spicy chicken pieces prepared with special seasoning.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Chicken 65 Fry',60,'IMG_5297.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="chicken-biryani.jpg"
+                            alt="Chicken Biryani"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Chicken Biryani
+                        </h4>
+
+                        <p>
+                            Flavourful basmati rice layered with juicy chicken and spices.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Chicken Biryani',150,'chicken-biryani.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹150
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Chicken-Lollipop.jpg"
+                            alt="Chicken Lollipop"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Chicken Lollipop
+                        </h4>
+
+                        <p>
+                            Crispy chicken lollipop with a delicious spicy coating.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Chicken Lollipop',80,'Chicken-Lollipop.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹80
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= TIFFINS ================= -->
+
+        <div
+            class="category"
+            id="tiffins">
+
+            <div class="category-heading">
+
+                <h3>
+                    Tiffins
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="dosa.jpg"
+                            alt="Masala Dosa"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Masala Dosa
+                        </h4>
+
+                        <p>
+                            Crispy golden dosa filled with tasty potato masala.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Masala Dosa',40,'dosa.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹40
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="idliy.jpg"
+                            alt="Idly"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Idly
+                        </h4>
+
+                        <p>
+                            Soft steamed idly served with chutney and sambar.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Idly',30,'idliy.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹30
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="vada.jpg"
+                            alt="Vada"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Vada
+                        </h4>
+
+                        <p>
+                            Crispy South Indian vada with a soft, delicious centre.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Vada',35,'vada.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹35
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= SNACKS ================= -->
+
+        <div
+            class="category"
+            id="snacks">
+
+            <div class="category-heading">
+
+                <h3>
+                    Snacks
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="samosa...jpg"
+                            alt="Samosa"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Samosa
+                        </h4>
+
+                        <p>
+                            Crispy golden samosa filled with spicy potato mixture.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Samosa',20,'samosa...jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹20
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="bonda.avif"
+                            alt="Pakoda"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Pakoda
+                        </h4>
+
+                        <p>
+                            Hot crispy pakoda made with fresh ingredients and spices.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Pakoda',30,'bonda.avif')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹30
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="mirchi-bajji.jpg"
+                            alt="French Fries"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            French Fries
+                        </h4>
+
+                        <p>
+                            Hot crispy fries served fresh and perfectly seasoned.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('French Fries',50,'mirchi-bajji.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= COLD DRINKS ================= -->
+
+        <div
+            class="category"
+            id="drinks">
+
+            <div class="category-heading">
+
+                <h3>
+                    Cold Drinks
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="Mojito-1.webp"
+                            alt="Mojito"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Mojito
+                        </h4>
+
+                        <p>
+                            Chilled refreshing drink with a fresh fruity flavour.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Mojito',40,'Mojito-1.webp')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹40
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="lagoon.jpg"
+                            alt="Fresh Juice"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Fresh Juice
+                        </h4>
+
+                        <p>
+                            Fresh fruit juice prepared from quality fruits.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Fresh Juice',60,'lagoon.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="drink.jpg"
+                            alt="Juice"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Juice
+                        </h4>
+
+                        <p>
+                            Cold, refreshing juice with a delicious flavour.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Juice',70,'drink.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹70
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= ICE CREAMS ================= -->
+
+        <div
+            class="category"
+            id="icecreams">
+
+            <div class="category-heading">
+
+                <h3>
+                    Ice Creams
+                </h3>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="fruit cream.jpg"
+                            alt="Vanilla Ice Cream"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Vanilla Ice Cream
+                        </h4>
+
+                        <p>
+                            Classic creamy vanilla ice cream with a smooth, delicious taste.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Vanilla Ice Cream',50,'fruit cream.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹50
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="nets ice cream.jpg"
+                            alt="Chocolate Ice Cream"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Chocolate Ice Cream
+                        </h4>
+
+                        <p>
+                            Rich chocolate ice cream with a smooth, creamy texture.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Chocolate Ice Cream',60,'nets ice cream.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card">
+
+                    <div class="image-container">
+
+                        <img
+                            src="nets icecream.jpg"
+                            alt="Strawberry Ice Cream"
+                            onclick="openImage(this.src)"
+                            class="clickable-image">
+
+                        <span class="zoom-icon">
+                            <i class="fa-solid fa-expand"></i>
+                        </span>
+
+                    </div>
+
+
+                    <div class="food-info">
+
+                        <h4>
+                            Strawberry Ice Cream
+                        </h4>
+
+                        <p>
+                            Sweet strawberry flavour with a creamy, delicious finish.
+                        </p>
+
+
+                        <div class="food-bottom">
+
+                            <button
+                                type="button"
+                                onclick="addItem('Strawberry Ice Cream',60,'nets icecream.jpg')">
+
+                                <i class="fa-solid fa-cart-plus"></i>
+
+                                Add Cart
+
+                            </button>
+
+                            <strong>
+                                ₹60
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <section
+        class="cart-box"
+        id="cart">
+
+        <div class="cart-heading">
+
+            <div class="cart-big-icon">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span id="cartBadge">
+                    0
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Your Cart
+                </h2>
+
+                <p id="cartMessage">
+                    No items added yet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="cartItems"
+            class="cart-items">
+        </div>
+
+
+        <div class="cart-count-box">
+
+            <span
+                class="count-number"
+                id="itemCount">
+                0
+            </span>
+
+            <span class="count-text">
+                Items Added
+            </span>
+
+        </div>
+
+
+        <div class="total-box">
+
+            <span>
+                Total Amount
+            </span>
+
+            <strong>
+                ₹<span id="totalAmount">0</span>
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="place-order"
+            onclick="placeOrder()">
+
+            <i class="fa-solid fa-check"></i>
+
+            Place Order
+
+        </button>
+
+
+        <div
+            id="orderResult"
+            class="order-result">
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<section class="quick-links-section">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    CRAZY CRAVINGS
+                </p>
+
+                <h2>
+                    
+
+    <!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- FOOTER BRAND -->
+
+        <div class="footer-box footer-brand">
+
+            <h3>
+                Crazy Cravings
+            </h3>
+
+            <p>
+                Delicious Taste • Fresh Ingredients •
+                Happy Moments
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="/menu">
+                Menu
+            </a>
+
+            <a href="chef.html">
+                Chef
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-box">
+
+            <h3>
+                Services
+            </h3>
+
+            <a href="booking.html">
+                Book a Table
+            </a>
+
+            <a href="order.html">
+                Order Online
+            </a>
+
+            <a href="booking.html">
+                Catering
+            </a>
+
+            <a href="rating.html">
+                Rating
+            </a>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Vijayawada, Andhra Pradesh
+            </p>
+
+            <p>
+                +91 98765 43210
+            </p>
+
+            <p>
+                crazycravings@gmail.com
+            </p>
+
+            <p>
+                10:00 AM - 11:00 PM
+            </p>
+
+        </div>
+
+
+        <!-- FOLLOW US -->
+
+        <div class="footer-box follow-box">
+
+            <h3>
+                Follow Us
+            </h3>
+
+            <p>
+                Follow Crazy Cravings for delicious updates,
+                special dishes and restaurant moments.
+            </p>
+
+
+            <!-- SOCIAL ICONS -->
+
+            <div class="social-icons">
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+
+    <div class="footer-bottom">
+
+        <div class="footer-copyright">
+
+            <p>
+                © 2026 Crazy Cravings.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+
+        <!-- RESOURCES -->
+
+    
+            <div class="resource-links">
+
+                <a href="Refund.html">
+                    Refund Policy
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="Terms.html">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+    
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+/* ================= MOBILE NAVBAR ================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const mobileNavbar =
+    document.getElementById("mobileNavbar");
+
+
+menuButton.addEventListener("click", function () {
+
+    menuButton.classList.toggle("active");
+
+    mobileNavbar.classList.toggle("show");
+
+    const isOpen =
+        mobileNavbar.classList.contains("show");
+
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+
+    menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close Menu" : "Open Menu"
+    );
+
+});
+
+
+document
+    .querySelectorAll(".mobile-navbar a")
+    .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menuButton.classList.remove("active");
+
+            mobileNavbar.classList.remove("show");
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuButton.setAttribute(
+                "aria-label",
+                "Open Menu"
+            );
+
+        });
+
+    });
+
+
+/* ================= LARGE IMAGE VIEWER ================= */
+
+const imageModal =
+    document.getElementById("imageModal");
+
+const largeImage =
+    document.getElementById("largeImage");
+
+
+function openImage(imageSource) {
+
+    largeImage.src = imageSource;
+
+    imageModal.classList.remove("closing");
+
+    imageModal.classList.add("show");
+
+    document.body.classList.add("modal-open");
+
+}
+
+
+function closeImage(event) {
+
+    if (event && event.target !== imageModal) {
+        return;
+    }
+
+
+    imageModal.classList.add("closing");
+
+    imageModal.classList.remove("show");
+
+    document.body.classList.remove("modal-open");
+
+
+    setTimeout(function () {
+
+        if (!imageModal.classList.contains("show")) {
+
+            largeImage.src = "";
+
+            imageModal.classList.remove("closing");
+
+        }
+
+    }, 1200);
+
+}
+
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key === "Escape" &&
+            imageModal.classList.contains("show")
+        ) {
+
+            closeImage();
+
+        }
+
+    }
+);
+
+
+/* ================= CART ================= */
+
+let cart = [];
+
+
+const cartMessage =
+    document.getElementById("cartMessage");
+
+const cartItems =
+    document.getElementById("cartItems");
+
+const itemCount =
+    document.getElementById("itemCount");
+
+const topCartCount =
+    document.getElementById("topCartCount");
+
+const cartBadge =
+    document.getElementById("cartBadge");
+
+const totalAmount =
+    document.getElementById("totalAmount");
+
+const orderResult =
+    document.getElementById("orderResult");
+
+
+function addItem(name, price, image) {
+
+    const existingItem =
+        cart.find(function (item) {
+
+            return item.name === name;
+
+        });
+
+
+    if (existingItem) {
+
+        existingItem.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name: name,
+
+            price: price,
+
+            image: image,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    updateCart();
+
+
+    cartMessage.textContent =
+        name + " added to cart successfully!";
+
+
+    cartMessage.classList.add(
+        "success-message"
+    );
+
+
+    setTimeout(function () {
+
+        cartMessage.classList.remove(
+            "success-message"
+        );
+
+
+        cartMessage.textContent =
+            cart.length > 0
+                ? "Your selected items are here."
+                : "No items added yet.";
+
+    }, 1500);
+
+}
+
+
+function updateCart() {
+
+    cartItems.innerHTML = "";
+
+
+    let totalItems = 0;
+
+    let totalPrice = 0;
+
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+
+            <div class="empty-cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <p>
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    cart.forEach(function (item, index) {
+
+        const itemTotal =
+            item.price * item.quantity;
+
+
+        totalItems += item.quantity;
+
+        totalPrice += itemTotal;
+
+
+        const cartRow =
+            document.createElement("div");
+
+        cartRow.className =
+            "cart-row";
+
+
+        const foodInfo =
+            document.createElement("div");
+
+        foodInfo.className =
+            "cart-food-info";
+
+
+        const cartImage =
+            document.createElement("div");
+
+        cartImage.className =
+            "cart-image";
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.src =
+            item.image;
+
+
+        img.alt =
+            item.name;
+
+
+        img.addEventListener(
+            "click",
+            function () {
+
+                openImage(item.image);
+
+            }
+        );
+
+
+        cartImage.appendChild(img);
+
+
+        const cartName =
+            document.createElement("div");
+
+        cartName.className =
+            "cart-name";
+
+
+        const nameHeading =
+            document.createElement("h4");
+
+        nameHeading.textContent =
+            item.name;
+
+
+        const priceText =
+            document.createElement("p");
+
+        priceText.textContent =
+            "₹" + item.price + " each";
+
+
+        cartName.appendChild(
+            nameHeading
+        );
+
+
+        cartName.appendChild(
+            priceText
+        );
+
+
+        foodInfo.appendChild(
+            cartImage
+        );
+
+
+        foodInfo.appendChild(
+            cartName
+        );
+
+
+        const quantityBox =
+            document.createElement("div");
+
+        quantityBox.className =
+            "quantity-box";
+
+
+        const minusButton =
+            document.createElement("button");
+
+        minusButton.type =
+            "button";
+
+        minusButton.textContent =
+            "-";
+
+
+        minusButton.setAttribute(
+            "aria-label",
+            "Decrease quantity"
+        );
+
+
+        minusButton.addEventListener(
+            "click",
+            function () {
+
+                decreaseQuantity(index);
+
+            }
+        );
+
+
+        const quantityText =
+            document.createElement("span");
+
+        quantityText.textContent =
+            item.quantity;
+
+
+        const plusButton =
+            document.createElement("button");
+
+        plusButton.type =
+            "button";
+
+        plusButton.textContent =
+            "+";
+
+
+        plusButton.setAttribute(
+            "aria-label",
+            "Increase quantity"
+        );
+
+
+        plusButton.addEventListener(
+            "click",
+            function () {
+
+                increaseQuantity(index);
+
+            }
+        );
+
+
+        quantityBox.appendChild(
+            minusButton
+        );
+
+
+        quantityBox.appendChild(
+            quantityText
+        );
+
+
+        quantityBox.appendChild(
+            plusButton
+        );
+
+
+        const itemTotalElement =
+            document.createElement("strong");
+
+        itemTotalElement.className =
+            "item-total";
+
+
+        itemTotalElement.textContent =
+            "₹" + itemTotal;
+
+
+        const removeButton =
+            document.createElement("button");
+
+        removeButton.type =
+            "button";
+
+
+        removeButton.className =
+            "remove-btn";
+
+
+        removeButton.setAttribute(
+            "aria-label",
+            "Remove " + item.name
+        );
+
+
+        removeButton.innerHTML =
+            '<i class="fa-solid fa-trash"></i>';
+
+
+        removeButton.addEventListener(
+            "click",
+            function () {
+
+                removeItem(index);
+
+            }
+        );
+
+
+        cartRow.appendChild(
+            foodInfo
+        );
+
+
+        cartRow.appendChild(
+            quantityBox
+        );
+
+
+        cartRow.appendChild(
+            itemTotalElement
+        );
+
+
+        cartRow.appendChild(
+            removeButton
+        );
+
+
+        cartItems.appendChild(
+            cartRow
+        );
+
+    });
+
+
+    itemCount.textContent =
+        totalItems;
+
+
+    topCartCount.textContent =
+        totalItems;
+
+
+    cartBadge.textContent =
+        totalItems;
+
+
+    totalAmount.textContent =
+        totalPrice;
+
+}
+
+
+function increaseQuantity(index) {
+
+    cart[index].quantity++;
+
+    updateCart();
+
+}
+
+
+function decreaseQuantity(index) {
+
+    if (cart[index].quantity > 1) {
+
+        cart[index].quantity--;
+
+    } else {
+
+        cart.splice(index, 1);
+
+    }
+
+
+    updateCart();
+
+}
+
+
+function removeItem(index) {
+
+    const removedName =
+        cart[index].name;
+
+
+    cart.splice(index, 1);
+
+
+    updateCart();
+
+
+    cartMessage.textContent =
+        removedName + " removed from cart.";
+
+}
+
+
+function placeOrder() {
+
+    if (cart.length === 0) {
+
+        orderResult.innerHTML = `
+
+            <div class="order-error">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <p>
+                    Please add items to your cart first.
+                </p>
+
+            </div>
+
+        `;
+
+
+        orderResult.className =
+            "order-result error";
+
+
+        return;
+
+    }
+
+
+    let totalItems = 0;
+
+    let totalPrice = 0;
+
+    let orderItemsHTML = "";
+
+
+    cart.forEach(function (item) {
+
+        const itemTotal =
+            item.price * item.quantity;
+
+
+        totalItems += item.quantity;
+
+        totalPrice += itemTotal;
+
+
+        const safeName =
+            item.name.replace(
+                /[&<>"']/g,
+                function (character) {
+
+                    return {
+
+                        "&": "&amp;",
+                        "<": "&lt;",
+                        ">": "&gt;",
+                        '"': "&quot;",
+                        "'": "&#39;"
+
+                    }[character];
+
+                }
+            );
+
+
+        orderItemsHTML += `
+
+            <div class="confirmed-item">
+
+                <div>
+
+                    <strong>
+                        ${safeName}
+                    </strong>
+
+                    <span>
+                        ${item.quantity} × ₹${item.price}
+                    </span>
+
+                </div>
+
+                <strong>
+                    ₹${itemTotal}
+                </strong>
+
+            </div>
+
+        `;
+
+    });
+
+
+    orderResult.innerHTML = `
+
+        <div class="order-success">
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <h3>
+                Order Placed Successfully!
+            </h3>
+
+
+            <p>
+
+                Thank you for choosing
+
+                <strong>
+                    Crazy Cravings
+                </strong>.
+
+            </p>
+
+
+            <div class="confirmed-order-list">
+
+                <h4>
+                    Your Order Details
+                </h4>
+
+                ${orderItemsHTML}
+
+            </div>
+
+
+            <div class="order-details">
+
+                <div>
+
+                    <span>
+                        Total Items
+                    </span>
+
+                    <strong>
+                        ${totalItems}
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total Price
+                    </span>
+
+                    <strong>
+                        ₹${totalPrice}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p class="order-thanks">
+
+                Your order contains
+
+                <strong>
+                    ${totalItems} item(s)
+                </strong>
+
+                with a total amount of
+
+                <strong>
+                    ₹${totalPrice}
+                </strong>.
+
+            </p>
+
+        </div>
+
+    `;
+
+
+    orderResult.className =
+        "order-result success";
+
+
+    setTimeout(function () {
+
+        orderResult.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "center"
+
+        });
+
+    }, 100);
+
+}
+
+
+updateCart();
+
+</script>
+
+</body>
+</html>
+

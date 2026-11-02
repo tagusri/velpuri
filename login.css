@@ -1,0 +1,765 @@
+
+/* =========================================
+   CRAZY CRAVINGS - FULL LOGIN CSS
+   Login, Registration, Scrolling & Profile
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #d9a441;
+    --gold-dark: #b78324;
+    --ink: #292929;
+    --muted: #777777;
+    --white: #ffffff;
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--ink);
+    background: #fff8ef;
+}
+
+a {
+    color: var(--gold-dark);
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+/* =========================================
+   RESTAURANT BACKGROUND PAGE
+========================================= */
+
+.background-page {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #fff7e8, #f7e4c7);
+}
+
+.background-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 18px 5%;
+    background: var(--white);
+    box-shadow: 0 2px 12px #0000000d;
+}
+
+.background-logo {
+    text-decoration: none;
+    color: #252525;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.background-logo span,
+.logo-mark span {
+    color: var(--gold-dark);
+}
+
+.background-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.background-header nav a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.background-header nav a:hover {
+    color: var(--gold-dark);
+}
+
+.account-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333333;
+    text-decoration: none;
+}
+
+.account-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+}
+
+.header-profile-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.background-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 90px 24px;
+    text-align: center;
+}
+
+.background-content h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    margin-bottom: 10px;
+}
+
+.background-content h2 {
+    color: var(--gold-dark);
+}
+
+.background-content p {
+    line-height: 1.7;
+}
+
+.background-content img {
+    display: block;
+    width: min(500px, 100%);
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 30px auto;
+}
+
+/* =========================================
+   BLURRED OVERLAY
+========================================= */
+
+.blur-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    background: #1b140d70;
+    backdrop-filter: blur(5px);
+}
+
+/* =========================================
+   IMPORTANT SCROLLING FIX
+   The overlay scrolls when the form is long.
+========================================= */
+
+.popup-wrap {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================
+   POPUP CONTAINER
+========================================= */
+
+.popup {
+    position: relative;
+
+    width: min(1000px, 100%);
+    height: auto;
+    max-height: none;
+
+    margin: auto;
+    overflow: visible;
+
+    background: #ffffff !important;
+    border-radius: 22px;
+    box-shadow: 0 20px 70px #0004;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    z-index: 20;
+
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff;
+
+    font-size: 27px;
+    cursor: pointer;
+
+    box-shadow: 0 2px 10px #0002;
+}
+
+.close-btn:hover {
+    background: #fff4dc;
+}
+
+/* =========================================
+   TWO-COLUMN POPUP LAYOUT
+========================================= */
+
+.popup-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: stretch;
+
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    overflow: visible;
+    background: #ffffff !important;
+    border-radius: 22px;
+}
+
+/* =========================================
+   LEFT FOOD IMAGE SECTION
+========================================= */
+
+.food-side {
+    min-width: 0;
+    padding: 28px;
+
+    color: #ffffff;
+    background: linear-gradient(160deg, #38251a, #6c4224);
+
+    border-radius: 22px 0 0 22px;
+}
+
+.main-food {
+    display: block;
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.food-side h1 {
+    margin: 22px 0 12px;
+    font-size: 29px;
+    line-height: 1.2;
+}
+
+.gold-line {
+    width: 65px;
+    height: 4px;
+
+    margin: 15px 0;
+
+    background: var(--gold);
+    border-radius: 4px;
+}
+
+.food-side p {
+    color: #f8eee5;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.food-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+
+    margin: 22px 0;
+}
+
+.food-gallery img {
+    display: block;
+    width: 100%;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+}
+
+.features span {
+    padding: 7px 9px;
+    border: 1px solid #ffffff55;
+    border-radius: 20px;
+}
+
+/* =========================================
+   RIGHT LOGIN / REGISTRATION SECTION
+========================================= */
+
+.form-side {
+    min-width: 0;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+
+    padding: 34px clamp(22px, 4vw, 46px);
+
+    background: #ffffff !important;
+    border-radius: 0 22px 22px 0;
+
+    overflow: visible;
+}
+
+/* =========================================
+   RESTAURANT LOGO
+========================================= */
+
+.logo-mark {
+    position: relative;
+    width: max-content;
+
+    margin: 0 auto 18px;
+
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.logo-mark strong {
+    color: #282828;
+}
+
+.smile {
+    width: 45px;
+    height: 10px;
+
+    margin: 0 auto;
+
+    border-bottom: 3px solid var(--gold);
+    border-radius: 50%;
+}
+
+/* =========================================
+   HUMAN / ACCOUNT ICON
+========================================= */
+
+.user-icon,
+.profile-human {
+    display: grid;
+    place-items: center;
+
+    width: 62px;
+    height: 62px;
+
+    margin: 10px auto;
+
+    color: var(--gold-dark);
+    background: hwb(60 4% 96%);
+    border-radius: 50%;
+}
+
+.user-icon svg,
+.profile-human svg {
+    width: 32px;
+    height: 32px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+}
+
+/* =========================================
+   FORM HEADINGS
+========================================= */
+
+.form-side h2 {
+    margin: 12px 0 5px;
+    text-align: center;
+}
+
+.subtitle {
+    margin: 0 0 22px;
+    color: var(--muted);
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================================
+   LABELS, INPUTS AND SELECT BOXES
+========================================= */
+
+form label,
+.register-grid label {
+    display: block;
+
+    margin: 13px 0 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+input:not([type="checkbox"]),
+select {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+
+    padding: 11px 12px;
+
+    color: #292929;
+    background: #ffffff;
+
+    border: 1px solid #ddd6cc;
+    border-radius: 9px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px #d9a44125;
+}
+
+/* =========================================
+   PASSWORD SHOW / HIDE BUTTON
+========================================= */
+
+.password-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.password-box input {
+    flex: 1;
+    min-width: 0;
+}
+
+.eye-btn {
+    flex: 0 0 42px;
+    height: 42px;
+
+    border: 1px solid #ddd6cc;
+    border-radius: 9px;
+
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.eye-btn:hover {
+    background: #fff5df;
+}
+
+/* =========================================
+   REMEMBER ME AND FORGOT PASSWORD
+========================================= */
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 14px 0;
+
+    font-size: 12px;
+}
+
+.options .remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    margin: 0;
+    font-weight: 400;
+}
+
+.options a,
+.switch-text a {
+    color: var(--gold-dark);
+    font-weight: 700;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-btn,
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    padding: 12px 16px;
+
+    color: #21190d;
+    background: var(--gold);
+
+    border: 0;
+    border-radius: 9px;
+
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.primary-btn:hover,
+.home-btn:hover {
+    background: #e6b85e;
+}
+
+.primary-btn:focus-visible,
+.home-btn:focus-visible,
+.close-btn:focus-visible,
+.eye-btn:focus-visible {
+    outline: 3px solid #b78324;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   SWITCH LOGIN / REGISTER
+========================================= */
+
+.switch-text {
+    margin: 17px 0;
+
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 18px 0;
+
+    color: #888888;
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e7e0d7;
+}
+
+/* =========================================
+   REGISTRATION FORM GRID
+========================================= */
+
+#registerView {
+    display: block;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 20px;
+}
+
+#registerView[hidden],
+#loginView[hidden],
+#profileResult[hidden],
+[hidden] {
+    display: none !important;
+}
+
+#registerForm {
+    display: block;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    padding-bottom: 25px;
+}
+
+.register-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 14px;
+
+    width: 100%;
+}
+
+.register-grid > div {
+    min-width: 0;
+}
+
+.register-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Terms confirmation checkbox */
+
+.agreement {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin: 16px 0 !important;
+
+    font-weight: 400 !important;
+    line-height: 1.5;
+}
+
+.agreement input {
+    flex: 0 0 auto;
+    margin-top: 3px;
+}
+
+/* =========================================
+   FORM VALIDATION MESSAGES
+========================================= */
+
+.message {
+    min-height: 0;
+    margin: 10px 0;
+
+    color: #a32727;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   SUCCESSFUL ACCOUNT PROFILE
+========================================= */
+
+.profile-result {
+    margin: 20px 0 10px;
+    padding: 22px;
+
+    text-align: center;
+
+    border: 1px solid #f0dfbd;
+    border-radius: 16px;
+
+    background: #fffaf0;
+}
+
+.profile-result h2 {
+    overflow-wrap: anywhere;
+    color: #292929;
+}
+
+.profile-result p {
+    color: #666666;
+    line-height: 1.7;
+}
+
+.profile-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+/* =========================================
+   MOBILE AND TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 760px) {
+    .background-header {
+        flex-wrap: wrap;
+    }
+
+    .background-header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .background-content {
+        padding: 45px 20px;
+    }
+
+    .popup-wrap {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .popup {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 16px;
+    }
+
+    .popup-layout {
+        display: block;
+        height: auto;
+        border-radius: 16px;
+    }
+
+    /* Keep the registration form easy to use on small screens. */
+    .food-side {
+        display: none;
+    }
+
+    .form-side {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 30px 22px;
+        border-radius: 16px;
+        overflow: visible;
+    }
+
+    #registerView,
+    #registerForm {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .close-btn {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* Small mobile phones */
+
+@media (max-width: 420px) {
+    .register-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-grid .full-width {
+        grid-column: auto;
+    }
+
+    .options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-side {
+        padding: 28px 17px;
+    }
+
+    .background-header nav {
+        font-size: 13px;
+    }
+}

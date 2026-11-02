@@ -1,0 +1,1486 @@
+/* =========================================================
+   CRAZY CRAVINGS - CHEFS PAGE
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #111111;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   PAGE FRAME
+   NO BORDER
+   ========================================================= */
+
+.page-frame {
+    width: 100%;
+    min-height: 100vh;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
+.header {
+    width: 100%;
+    height: 82px;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.logo i {
+    color: #f2c400;
+    font-size: 25px;
+}
+
+.logo .crazy {
+    color: #f2c400;
+}
+
+.logo .cravings {
+    color: #111111;
+}
+
+
+/* =========================================================
+   DESKTOP NAVBAR
+   ========================================================= */
+
+.desktop-navbar {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.desktop-navbar a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #111111;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 0;
+
+    transition: 0.3s ease;
+}
+
+
+/* ACTIVE UNDERLINE */
+
+.desktop-navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #f2c400;
+
+    transition: width 0.3s ease;
+}
+
+.desktop-navbar a:hover::after,
+.desktop-navbar a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+
+
+.logo-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Utensils Logo */
+.logo-button i {
+    font-size: 25px;
+    color: #f2c400;
+    transition: 0.3s ease;
+}
+
+/* Crazy */
+.logo-button .crazy {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f2c400;
+}
+
+/* Cravings */
+.logo-button .cravings {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111111;
+}
+
+/* Hover */
+.logo-button:hover i {
+    transform: scale(1.08);
+}
+
+.logo-button:hover .crazy {
+    color: #d9a900;
+}
+
+.logo-button:hover .cravings {
+    color: #111111;
+}
+/* ================= LOGIN BUTTON ================= */
+/* LOGIN BUTTON */
+
+.desktop-navbar .login-button {
+    height: 40px;
+    min-width: 90px;
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    background: #6b3f25;
+    color: #ffffff;
+
+    border: 2px solid #6b3f25;
+    border-radius: 3px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER → YELLOW */
+
+.desktop-navbar .login-button:hover {
+    background: #f2c400;
+    color: #000000;
+}
+
+
+/* CLICK → YELLOW */
+
+.desktop-navbar .login-button:active,
+.desktop-navbar .login-button:focus {
+    background: #f2c400;
+    color: #000000;
+    outline: none;
+}
+
+
+/* NO UNDERLINE */
+
+.desktop-navbar .login-button::after {
+    display: none;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-button {
+    display: none;
+
+    margin-left: auto;
+
+    width: 42px;
+    height: 38px;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 3px;
+
+    background: #111111;
+
+    border-radius: 2px;
+
+    transition: 0.3s ease;
+}
+
+.menu-button.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-button.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR
+   ========================================================= */
+
+.mobile-navbar {
+    display: none;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 15px 6%;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+.mobile-navbar.show {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.mobile-navbar a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 12px 0;
+}
+
+.mobile-navbar a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 5px;
+
+    width: 0;
+    height: 3px;
+
+    background: #f2c400;
+
+    transition: width 0.3s ease;
+}
+
+.mobile-navbar a:hover::after,
+.mobile-navbar a.mobile-active::after {
+    width: 100%;
+}
+
+.mobile-navbar a i {
+    margin-right: 7px;
+}
+
+
+/* =========================================================
+   TOP CHEF IMAGE
+   FULL SCREEN BELOW NAVBAR
+   NO BORDER
+   ========================================================= */
+
+.chef-hero {
+    width: 100%;
+
+    min-height: calc(100vh - 82px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: none !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TOP IMAGE
+   FULL SCREEN
+   ========================================================= */
+
+.chef-hero-image {
+    width: 100%;
+
+    height: calc(100vh - 82px);
+
+    min-height: 600px;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    margin: 0;
+
+    border: none !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+}
+
+.chef-hero-image img {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border: none !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    cursor: pointer;
+
+    transition: transform 0.5s ease;
+}
+
+.chef-hero-image img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   BELOW FULL SCREEN IMAGE
+   ========================================================= */
+
+.chef-hero-content {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 80px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: none !important;
+}
+
+.small-title {
+    color: #f2c400;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.chef-hero-content h1 {
+    color: #111111;
+
+    font-size: clamp(40px, 5vw, 68px);
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+.chef-hero-content h1 span {
+    color: #f2c400;
+}
+
+.chef-hero-content > p:not(.small-title) {
+    max-width: 650px;
+
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   YELLOW LINE
+   ========================================================= */
+
+.yellow-line {
+    width: 65px;
+
+    height: 4px;
+
+    background: #f2c400;
+
+    margin: 12px 0 22px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.chef-intro {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: none !important;
+}
+
+.section-heading {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #111111;
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.25;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 span {
+    color: #f2c400;
+}
+
+.heading-line {
+    width: 65px;
+
+    height: 4px;
+
+    background: #f2c400;
+
+    margin: 15px auto 25px;
+}
+
+.section-heading > p:last-child {
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   THREE CHEF SECTIONS
+   ========================================================= */
+
+.chef-section {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 80px 7%;
+
+    background: #ffffff;
+
+    border: none !important;
+}
+
+.chef-section.reverse {
+    background: #fafafa;
+
+    border: none !important;
+}
+
+.chef-section.reverse .chef-image-box {
+    order: 2;
+}
+
+.chef-section.reverse .chef-content {
+    order: 1;
+}
+
+
+/* =========================================================
+   THREE CHEF IMAGES
+   YELLOW BORDER
+   ========================================================= */
+
+.chef-image-box {
+    width: 100%;
+
+    overflow: hidden;
+
+    border: none !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+}
+
+.chef-image-box img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border: 4px solid #f2c400 !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    cursor: pointer;
+
+    transition: transform 0.5s ease;
+}
+
+.chef-image-box img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CHEF CONTENT
+   ========================================================= */
+
+.chef-content {
+    width: 100%;
+
+    border: none !important;
+}
+
+.chef-number {
+    color: #f2c400;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.chef-content h2 {
+    color: #111111;
+
+    font-size: clamp(28px, 3vw, 42px);
+
+    line-height: 1.25;
+
+    margin-bottom: 5px;
+}
+
+.chef-content h2 span {
+    color: #f2c400;
+}
+
+.chef-content > p:not(.chef-number) {
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CHEF SPECIAL
+   ========================================================= */
+
+.chef-special {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    padding: 14px 18px;
+
+    background: #fff8d6;
+
+    border-left: 4px solid #f2c400;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.chef-special i {
+    color: #f2c400;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   CHEF STORY
+   ========================================================= */
+
+.chef-story {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background: #ffffff;
+
+    border: none !important;
+}
+
+.story-content {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+
+    text-align: center;
+}
+
+.story-content p {
+    color: #555555;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   CHEF VALUES
+   ========================================================= */
+
+.chef-values {
+    width: 100%;
+
+    padding: 80px 7%;
+
+    background: #fafafa;
+
+    border: none !important;
+}
+
+.values-container {
+    max-width: 1200px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.value-card {
+    background: #ffffff;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-7px);
+}
+
+.value-icon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff8d6;
+
+    color: #f2c400;
+
+    font-size: 25px;
+
+    border-radius: 50%;
+}
+
+.value-card h3 {
+    color: #111111;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding-top: 60px;
+}
+
+
+/* =====================================================
+   FOOTER CONTAINER
+   ===================================================== */
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.3fr 1.4fr;
+
+    gap: 35px;
+
+    padding-bottom: 45px;
+}
+
+
+/* =====================================================
+   FOOTER BOX
+   ===================================================== */
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* =====================================================
+   FOOTER HEADINGS
+   ===================================================== */
+
+.footer-brand h3,
+.footer-box h3,
+.footer-resources h3 {
+    color: #f2c400;
+}
+
+
+.footer-brand h3 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+
+.footer-box h3 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+
+/* =====================================================
+   FOOTER TEXT
+   ===================================================== */
+
+.footer-box p {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+   ===================================================== */
+
+.footer-box a,
+.resource-links a {
+    color: #ddd;
+    font-size: 14px;
+
+    text-decoration: none !important;
+    border: none;
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+.footer-box a:hover,
+.resource-links a:hover {
+    color: #f2c400;
+
+    text-decoration: none !important;
+    border: none;
+}
+
+
+/* =====================================================
+   FOLLOW US
+   ===================================================== */
+
+.follow-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+   ONLY ROUND CIRCLES
+   ===================================================== */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #aaa;
+    border-radius: 50%;
+
+    color: #fff;
+
+    text-decoration: none !important;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.social-icons a i {
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   SOCIAL ICON HOVER
+   ===================================================== */
+
+.social-icons a:hover {
+    color: #f2c400;
+
+    border-color: #f2c400;
+
+    transform: translateY(-3px);
+}
+
+
+.social-icons a:hover i {
+    color: #f2c400;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+   ===================================================== */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(242, 196, 0, 0.35);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 30px;
+}
+
+
+/* =====================================================
+   COPYRIGHT
+   ===================================================== */
+
+.footer-copyright {
+    flex: 1;
+}
+
+
+.footer-copyright p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESOURCES
+   ===================================================== */
+
+.footer-resources {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    text-align: right;
+}
+
+
+.footer-resources h3 {
+    font-size: 18px;
+
+    margin: 0 0 10px 0;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RESOURCE LINKS HORIZONTAL
+   ===================================================== */
+
+.resource-links {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 25px;
+
+    white-space: nowrap;
+}
+
+
+.resource-links a {
+    color: #aaa;
+
+    font-size: 13px;
+
+    text-decoration: none !important;
+}
+
+
+.resource-links a:hover {
+    color: #f2c400;
+
+    text-decoration: none !important;
+}
+
+
+
+/* =========================================================
+                        RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .desktop-nav {
+        gap: 20px;
+    }
+
+    .desktop-nav > a {
+        font-size: 14px;
+    }
+
+    .about-main,
+    .philosophy-section,
+    .spices-section,
+    .experience-section {
+        gap: 45px;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .top-header {
+        height: 72px;
+
+        padding: 0 5%;
+    }
+
+    .logo .crazy,
+    .logo .cravings {
+        font-size: 23px;
+    }
+
+    .logo i {
+        font-size: 22px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+    .mobile-nav.show-mobile-menu {
+        display: block;
+    }
+
+
+    .about-main,
+    .philosophy-section,
+    .spices-section,
+    .experience-section {
+        grid-template-columns: 1fr;
+
+        padding: 70px 6%;
+
+        gap: 45px;
+    }
+
+    .about-content,
+    .philosophy-content,
+    .spices-content,
+    .experience-content {
+        max-width: 100%;
+    }
+
+
+    .about-content h1 {
+        font-size: 46px;
+    }
+
+    .philosophy-content h2,
+    .spices-content h2,
+    .experience-content h2 {
+        font-size: 40px;
+    }
+
+
+    .special-section {
+        padding: 70px 6%;
+    }
+
+    .special-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .special-card {
+        max-width: 600px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    .food-image-box,
+    .philosophy-image,
+    .spices-image,
+    .experience-image {
+        max-width: 100%;
+    }
+
+    .food-decoration {
+        width: 190px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        padding: 60px 6% 40px;
+
+        gap: 40px;
+    }
+
+    .footer-box {
+        max-width: 500px;
+    }
+
+
+    .image-modal {
+        padding: 25px;
+    }
+
+    .image-modal img {
+        max-width: 95vw;
+        max-height: 80vh;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .desktop-navbar {
+        gap: 18px;
+    }
+
+    .chef-hero-image {
+        height: 70vh;
+
+        min-height: 500px;
+    }
+
+    .chef-section {
+        grid-template-columns: 1fr;
+    }
+
+    .chef-section.reverse .chef-image-box {
+        order: 1;
+    }
+
+    .chef-section.reverse .chef-content {
+        order: 2;
+    }
+
+    .values-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 72px;
+
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .logo i {
+        font-size: 21px;
+    }
+
+    .desktop-navbar {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+
+
+    /* TOP IMAGE */
+
+    .chef-hero {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .chef-hero-image {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        order: 1;
+    }
+
+    .chef-hero-image img {
+        width: 100%;
+
+        height: auto;
+
+        min-height: 0;
+
+        object-fit: contain;
+
+        border: none !important;
+    }
+
+
+    /* CONTENT AFTER IMAGE */
+
+    .chef-hero-content {
+        min-height: auto;
+
+        padding: 55px 7%;
+
+        order: 2;
+    }
+
+
+    .chef-intro,
+    .chef-section,
+    .chef-story,
+    .chef-values {
+        padding: 60px 6%;
+    }
+
+    .chef-section {
+        gap: 35px;
+    }
+
+
+    /* THREE CHEF IMAGES */
+
+    .chef-image-box img {
+        border: 3px solid #f2c400 !important;
+    }
+
+
+    .values-container {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-left: 7%;
+
+        padding-right: 7%;
+    }
+
+    .footer-box {
+        align-items: flex-start;
+    }
+
+
+    /* MODAL */
+
+    .image-modal {
+        padding: 25px;
+    }
+
+    .modal-image-container img {
+        max-width: 95vw;
+
+        max-height: 82vh;
+
+        border-width: 3px;
+    }
+
+    .modal-close {
+        top: 12px;
+
+        right: 15px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo i {
+        font-size: 19px;
+    }
+
+    .chef-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .chef-content h2 {
+        font-size: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .chef-special {
+        align-items: flex-start;
+    }
+
+    .footer {
+        padding-top: 45px;
+    }
+}

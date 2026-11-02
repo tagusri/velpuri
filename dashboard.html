@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crazy Cravings Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+
+    <header class="topbar">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <span class="logo-black">Crazy</span>
+
+            <span class="logo-red">Cravings</span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+
+            <a href="home.html">home</a>
+
+            <a href="about.html">about</a>
+
+            <a href="/menu">menu</a>
+
+            <a href="chef.html">chef</a>
+
+            <a href="login.html">login</a>
+
+            <a href="contact.html">contact</a>
+
+        </nav>
+
+
+        <!-- RIGHT SIDE ACTIONS -->
+        <div class="top-actions">
+
+
+            <!-- NOTIFICATION -->
+            <button type="button" class="icon-btn">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <span class="notification-dot"></span>
+
+            </button>
+
+
+            <!-- CART -->
+            <a href="/menu" class="icon-btn cart-icon">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span class="cart-count">0</span>
+
+            </a>
+
+
+            <!-- PROFILE -->
+            <a href="home.html" class="profile-btn">
+
+                <div class="profile-circle">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <span>My Profile</span>
+
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN DASHBOARD ================= -->
+
+    <main class="dashboard">
+
+
+        <!-- ================= POPULAR FOOD ================= -->
+
+        <section class="popular-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="mini-title">
+                        CUSTOMER FAVORITES
+                    </p>
+
+                    <h2>
+                        Popular Foods 🔥
+                    </h2>
+
+                </div>
+
+
+                <a href="/menu" class="view-menu">
+
+                    View All
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- FOOD CARDS -->
+
+            <div class="popular-container">
+
+
+                <!-- CHICKEN BIRYANI -->
+
+                <div class="food-card">
+
+                    <img src="chicken-biryani.jpg"
+                        alt="Chicken Biryani">
+
+                    <div class="food-info">
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p>🍗 Spicy & Delicious</p>
+
+
+                        <div class="food-bottom">
+
+                            <span>₹199</span>
+
+                            <a href="/menu">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PIZZA -->
+
+                <div class="food-card">
+
+                    <img src="food.jpg"
+                        alt="Cheese Pizza">
+
+                    <div class="food-info">
+
+                        <h3>Cheese Pizza</h3>
+
+                        <p>🧀 Extra Cheese</p>
+
+
+                        <div class="food-bottom">
+
+                            <span>₹249</span>
+
+                            <a href="/menu">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BURGER -->
+
+                <div class="food-card">
+
+                    <img src="chicken-biryani.jpg"
+                        alt="Chicken Burger">
+
+                    <div class="food-info">
+
+                        <h3>Chicken Burger</h3>
+
+                        <p>🍔 Crispy & Juicy</p>
+
+
+                        <div class="food-bottom">
+
+                            <span>₹149</span>
+
+                            <a href="/menu">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOODLES -->
+
+                <div class="food-card">
+
+                    <img src="fry.rice.jpg"
+                        alt="Spicy Noodles">
+
+                    <div class="food-info">
+
+                        <h3>Spicy Noodles</h3>
+
+                        <p>🌶️ Hot & Tasty</p>
+
+
+                        <div class="food-bottom">
+
+                            <span>₹129</span>
+
+                            <a href="/menu">
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SPECIAL OFFER ================= -->
+
+        <section class="special-offer">
+
+
+            <div class="offer-content">
+
+                <p>🎉 LIMITED TIME OFFER</p>
+
+                <h2>Get 30% OFF</h2>
+
+                <h3>On Your First Order!</h3>
+
+                <span>
+                    Use Code:
+                    <b>CRAZY30</b>
+                </span>
+
+                <br><br>
+
+                <a href="/menu">
+                    Order Now
+                </a>
+
+            </div>
+
+
+            <div class="offer-image">
+
+                <div class="big-food-icon">
+                    🍔
+                </div>
+
+                <div class="small-food-icon">
+                    🍟
+                </div>
+
+                <div class="small-drink-icon">
+                    🥤
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= FOOD CATEGORIES ================= -->
+
+        <section class="category-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="mini-title">
+                        EXPLORE MORE
+                    </p>
+
+                    <h2>
+                        Food Categories 🍽️
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="category-container">
+
+
+                <!-- MEALS -->
+                <a href="/menu" class="category-card">
+
+                    <div class="category-icon">
+                        🍛
+                    </div>
+
+                    <h3>Meals</h3>
+
+                    <p>Delicious meals</p>
+
+                </a>
+
+
+                <!-- NON VEG -->
+                <a href="/menu" class="category-card">
+
+                    <div class="category-icon">
+                        🍗
+                    </div>
+
+                    <h3>Non-Veg</h3>
+
+                    <p>Chicken & More</p>
+
+                </a>
+
+
+                <!-- VEG -->
+                <a href="/menu" class="category-card">
+
+                    <div class="category-icon">
+                        🥗
+                    </div>
+
+                    <h3>Veg</h3>
+
+                    <p>Fresh vegetables</p>
+
+                </a>
+
+
+                <!-- DESSERTS -->
+                <a href="/menu" class="category-card">
+
+                    <div class="category-icon">
+                        🍨
+                    </div>
+
+                    <h3>Desserts</h3>
+
+                    <p>Sweet happiness</p>
+
+                </a>
+
+
+                <!-- DRINKS -->
+                <a href="/menu" class="category-card">
+
+                    <div class="category-icon">
+                        🥤
+                    </div>
+
+                    <h3>Drinks</h3>
+
+                    <p>Cold & refreshing</p>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="order-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="mini-title">
+                        EASY ORDERING
+                    </p>
+
+                    <h2>
+                        How It Works 🚀
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="steps-container">
+
+
+                <!-- STEP 1 -->
+                <div class="step-card">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <h3>Choose Food</h3>
+
+                    <p>
+                        Select your favorite delicious food.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+                <div class="step-card">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <h3>Add to Cart</h3>
+
+                    <p>
+                        Add your selected food to the cart.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+                <div class="step-card">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>Add Address</h3>
+
+                    <p>
+                        Enter your delivery location.
+                    </p>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+                <div class="step-card">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>Enjoy Food</h3>
+
+                    <p>
+                        Get your food and enjoy your meal!
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= QUICK STATS ================= -->
+
+        <section class="quick-stats">
+
+
+            <!-- FOOD ITEMS -->
+            <div class="quick-stat-card">
+
+                <i class="fa-solid fa-utensils"></i>
+
+                <div>
+
+                    <h2>100+</h2>
+
+                    <p>Food Items</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HAPPY CUSTOMERS -->
+            <div class="quick-stat-card">
+
+                <i class="fa-solid fa-face-smile"></i>
+
+                <div>
+
+                    <h2>5K+</h2>
+
+                    <p>Happy Customers</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RATING -->
+            <div class="quick-stat-card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <div>
+
+                    <h2>4.9</h2>
+
+                    <p>Customer Rating</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- DELIVERY -->
+            <div class="quick-stat-card">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <div>
+
+                    <h2>30 Min</h2>
+
+                    <p>Fast Delivery</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FLOATING CART ================= -->
+
+    <a href="/menu" class="floating-cart">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span>My Cart</span>
+
+        <b>0</b>
+
+    </a>
+
+
+</body>
+
+</html>

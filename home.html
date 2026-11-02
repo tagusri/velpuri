@@ -1,0 +1,1741 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crazy Cravings | Home</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- HOME CSS -->
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<div class="page-frame">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="home.html" class="logo">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <span class="crazy">Crazy</span>
+            <span class="cravings">Cravings</span>
+
+        </a>
+
+        <!-- DESKTOP NAVBAR -->
+
+        <nav class="desktop-navbar">
+
+            <a href="home.html" class="active">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="menu.html">Menu</a>
+
+            <a href="chef.html">Chef</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="booking.html" class="login-button">
+                booking
+            </a>
+
+            <!-- HUMAN ICON -->
+
+            <a href="login.html"
+               class="profile-icon"
+               aria-label="Login">
+
+                <i class="fa-solid fa-user" id="humanIcon"></i>
+
+            </a>
+
+        </nav>
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= MOBILE NAVBAR ================= -->
+
+    <nav class="mobile-navbar" id="mobileNavbar">
+
+        <a href="home.html" class="active">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="chef.html">Chef</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="login.html" class="login-button">
+            Login
+        </a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero-slider">
+
+        <div class="slides" id="slides">
+
+            <div class="slide active-slide">
+
+                <img
+                    src="istockphoto.jpg"
+                    alt="Delicious Indian Food"
+                    class="hero-image">
+
+                <div class="hero-content">
+
+                    <span class="small-title">
+                        WELCOME TO CRAZY CRAVINGS
+                    </span>
+
+                    <h1>
+                        Fresh Food. Beautiful Moments.
+                    </h1>
+
+                    <h2>
+                        Taste That Brings Happiness
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="chicken-biryani.jpg"
+                    alt="Chicken Biryani"
+                    class="hero-image">
+
+                <div class="hero-content">
+
+                    <span class="small-title">
+                        SPECIAL FLAVOURS
+                    </span>
+
+                    <h1>
+                        Delicious Chicken Biryani
+                    </h1>
+
+                    <h2>
+                        Rich Taste • Fresh Ingredients
+                    </h2>
+
+                    <p>
+                        Fragrant rice, tender chicken and carefully
+                        selected spices come together to create a
+                        delicious dining experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="slide">
+
+                <img
+                    src="hot.png"
+                    alt="Hot Fresh Food"
+                    class="hero-image">
+
+                <div class="hero-content">
+
+                    <span class="small-title">
+                        OUR SPECIAL KITCHEN
+                    </span>
+
+                    <h1>
+                        Hot &amp; Fresh Every Day
+                    </h1>
+
+                    <h2>
+                        Prepared With Care
+                    </h2>
+
+                    <p>
+                        Every dish is freshly prepared with quality
+                        ingredients and a lot of care to bring you
+                        memorable flavours.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO ARROWS -->
+
+        <button
+            class="hero-arrow prev"
+            id="prevButton"
+            aria-label="Previous Slide">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <button
+            class="hero-arrow next"
+            id="nextButton"
+            aria-label="Next Slide">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+
+        <!-- HERO DOTS -->
+
+        <div class="hero-dots">
+
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= FOOD STORY ================= -->
+
+        <section class="content-section food-story">
+
+            <div class="section-title">
+
+                <h2>OUR FOOD STORY</h2>
+
+                <h1>
+                    Delicious Food, Beautiful Memories
+                </h1>
+
+            </div>
+
+
+            <div class="food-intro">
+
+                <div class="image-frame intro-image">
+
+                    <img
+                        src="thali.webp"
+                        alt="Traditional Indian Thali"
+                        class="zoom-image">
+
+                </div>
+
+
+                <div class="intro-content">
+
+                    <p>
+                        Food is more than just a meal. It is a
+                        tradition, a celebration and a beautiful
+                        memory shared with the people we love.
+                    </p>
+
+                    <p>
+                        At Crazy Cravings, we bring together the
+                        wonderful flavours of Indian cuisine with
+                        fresh ingredients, traditional recipes and
+                        modern presentation.
+                    </p>
+
+                    <p>
+                        Every dish is prepared with carefully selected
+                        ingredients and authentic spices to give you
+                        the perfect balance of taste and freshness.
+                    </p>
+
+                    <p>
+                        From family dinners to celebrations and special
+                        occasions, we create a dining experience that
+                        feels warm, delicious and memorable.
+                    </p>
+
+                    <p>
+                        Our goal is simple: serve delicious food,
+                        create beautiful memories and make every
+                        guest feel welcome.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRADITIONAL FLAVOURS ================= -->
+
+        <section class="content-section story-section">
+
+            <div class="story-row">
+
+                <div class="story-content">
+
+                    <span class="section-label">
+                        TRADITIONAL FLAVOURS
+                    </span>
+
+                    <h2>
+                        Food Made With Love
+                    </h2>
+
+                    <p>
+                        Our kitchen celebrates the rich culinary
+                        traditions of India.
+                    </p>
+
+                    <p>
+                        From aromatic spices to freshly prepared
+                        vegetables and perfectly cooked rice, every
+                        ingredient is chosen with care.
+                    </p>
+
+                    <p>
+                        We believe that delicious food begins with
+                        quality ingredients and ends with a happy
+                        customer.
+                    </p>
+
+                    <p>
+                        Our chefs carefully balance traditional
+                        flavours with a modern presentation so that
+                        every plate looks as wonderful as it tastes.
+                    </p>
+
+                </div>
+
+
+                <div class="image-frame story-image">
+
+                    <img
+                        src="today.jpg"
+                        alt="Traditional Indian Food"
+                        class="zoom-image">
+
+                </div>
+
+            </div>
+
+
+            <div class="story-row reverse">
+
+                <div class="image-frame story-image">
+
+                    <img
+                        src="bufa.jpg"
+                        alt="Indian Restaurant Food"
+                        class="zoom-image">
+
+                </div>
+
+
+                <div class="story-content">
+
+                    <span class="section-label">
+                        SOMETHING FOR EVERYONE
+                    </span>
+
+                    <h2>
+                        A Taste For Everyone
+                    </h2>
+
+                    <p>
+                        Whether you enjoy vegetarian dishes,
+                        delicious non-vegetarian meals or fresh
+                        seafood, there is something special waiting
+                        for you.
+                    </p>
+
+                    <p>
+                        Our menu is carefully designed to bring
+                        different flavours together while keeping
+                        freshness and quality at the heart of every
+                        dish.
+                    </p>
+
+                    <p>
+                        Enjoy a comforting family meal or discover
+                        something new from our kitchen.
+                    </p>
+
+                    <p>
+                        Every plate is prepared to make your visit
+                        memorable.
+                    </p>
+
+                    <p>
+                        We also offer sweet treats and refreshing
+                        choices for guests looking for the perfect
+                        ending to their meal.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY ================= -->
+
+        <section class="content-section why-section">
+
+            <div class="section-title">
+
+                <h2>WHY CRAZY CRAVINGS</h2>
+
+                <h1>
+                    More Than A Meal, A Memory
+                </h1>
+
+            </div>
+
+
+            <div class="why-content">
+
+                <p>
+                    At Crazy Cravings, we believe that a restaurant
+                    should be more than a place to eat.
+                </p>
+
+                <p>
+                    It should be a place where families meet,
+                    friends laugh, celebrations begin and beautiful
+                    memories are created.
+                </p>
+
+                <p>
+                    Our team works every day to provide delicious
+                    food, friendly service and a comfortable dining
+                    experience for every guest.
+                </p>
+
+                <p>
+                    Fresh ingredients, careful preparation and
+                    friendly hospitality come together to make
+                    every visit special.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHAIRMAN ================= -->
+
+        <section class="content-section chairman-section">
+
+            <div class="chairman-row">
+
+                <div class="image-frame chairman-image">
+
+                    <img
+                        src="business.avif"
+                        alt="Our Chairman"
+                        class="zoom-image">
+
+                </div>
+
+
+                <div class="chairman-content">
+
+                    <span class="section-label">
+                        OUR LEADERSHIP
+                    </span>
+
+                    <h2>
+                        Meet Our Chairman
+                    </h2>
+
+                    <p>
+                        Our journey is guided by a passion for
+                        hospitality, quality food and customer
+                        happiness.
+                    </p>
+
+                    <p>
+                        With a strong vision and dedication to
+                        excellence, Crazy Cravings continues to
+                        create memorable experiences for every
+                        guest.
+                    </p>
+
+                    <p>
+                        Our leadership believes that every meal
+                        should bring people together and every
+                        customer should leave with a smile.
+                    </p>
+
+                    <p>
+                        This vision continues to inspire our team
+                        to maintain quality, warmth and consistency
+                        in everything we serve.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="content-section categories-section">
+
+            <div class="section-title">
+
+                <h2>OUR SPECIAL CATEGORIES</h2>
+
+                <h1>
+                    Choose Your Favourite
+                </h1>
+
+            </div>
+
+
+            <div class="category-buttons">
+
+                <button class="category-button active-category"
+                    data-category="veg">
+                    Vegetarian
+                </button>
+
+                <button class="category-button"
+                    data-category="nonveg">
+                    Non-Vegetarian
+                </button>
+
+                <button class="category-button"
+                    data-category="seafood">
+                    Seafood
+                </button>
+
+                <button class="category-button"
+                    data-category="desserts">
+                    Desserts
+                </button>
+
+            </div>
+
+
+            <!-- ================= VEG ================= -->
+
+            <div class="food-category active-category" id="veg">
+
+                <div class="food-grid">
+
+                    <div class="food-item image-frame">
+
+                        <img src="banana-leaf-meal.png"
+                            alt="Vegetarian Meal"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Traditional Veg Meal</h3>
+
+                            <p>
+                                Fresh and delicious traditional
+                                vegetarian flavours.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="online.jpg"
+                            alt="Vegetarian Dish"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Special Veg Curry</h3>
+
+                            <p>
+                                A delicious curry prepared with
+                                fresh ingredients.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="online.2.jpg"
+                            alt="Veg Food"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Classic Veg Special</h3>
+
+                            <p>
+                                A comforting vegetarian favourite.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="curry.1.jpg"
+                            alt="Vegetable Curry"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Homemade Veg Curry</h3>
+
+                            <p>
+                                Rich flavours with traditional spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="online.3.jpg"
+                            alt="Vegetarian Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Fresh Veg Special</h3>
+
+                            <p>
+                                Freshly prepared for a wonderful meal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="curry.jpg"
+                            alt="Indian Veg Curry"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Indian Curry</h3>
+
+                            <p>
+                                Traditional taste with aromatic spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= NON VEG ================= -->
+
+            <div class="food-category" id="nonveg">
+
+                <div class="food-grid">
+
+                    <div class="food-item image-frame">
+
+                        <img src="best 1.avif"
+                            alt="Non Vegetarian Food"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Chicken Special</h3>
+
+                            <p>
+                                Tender chicken prepared with rich
+                                Indian flavours.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="total..jpg"
+                            alt="Chicken Dish"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Chicken Curry</h3>
+
+                            <p>
+                                Spicy and flavourful traditional
+                                chicken curry.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="meat-curry-.avif"
+                            alt="Meat Curry"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Meat Curry</h3>
+
+                            <p>
+                                Rich and aromatic meat curry.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="images (2).jpg"
+                            alt="Chicken Food"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Chicken Delight</h3>
+
+                            <p>
+                                A delicious favourite from our kitchen.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="non.2.webp"
+                            alt="Non Veg Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Special Non-Veg</h3>
+
+                            <p>
+                                Freshly prepared with authentic spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="non..avif"
+                            alt="Non Vegetarian Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Chef's Non-Veg Special</h3>
+
+                            <p>
+                                A rich and satisfying special dish.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SEAFOOD ================= -->
+
+            <div class="food-category" id="seafood">
+
+                <div class="food-grid">
+
+                    <div class="food-item image-frame">
+
+                        <img src="fish.avif"
+                            alt="Fish Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Fresh Fish Special</h3>
+
+                            <p>
+                                Fresh fish cooked with aromatic spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="total.4.jpg"
+                            alt="Seafood Dish"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Seafood Curry</h3>
+
+                            <p>
+                                Rich seafood flavours in every bite.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="total.2.jpg"
+                            alt="Seafood Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Coastal Special</h3>
+
+                            <p>
+                                Delicious coastal-inspired seafood.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="maxresdefault.jpg"
+                            alt="Seafood Meal"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Seafood Feast</h3>
+
+                            <p>
+                                A wonderful combination of fresh
+                                seafood and spices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="total.1.jpg"
+                            alt="Fish Dish"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Special Fish Dish</h3>
+
+                            <p>
+                                Freshly prepared for seafood lovers.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= DESSERTS ================= -->
+
+            <div class="food-category" id="desserts">
+
+                <div class="food-grid">
+
+                    <div class="food-item image-frame">
+
+                        <img src="declicious 1.jpg"
+                            alt="Indian Dessert"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Traditional Sweet</h3>
+
+                            <p>
+                                A delicious traditional Indian sweet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="dessert.2.jpg"
+                            alt="Dessert"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Special Dessert</h3>
+
+                            <p>
+                                Sweet, creamy and delicious.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="dessert.3.jpg"
+                            alt="Sweet Dish"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Chef's Sweet Special</h3>
+
+                            <p>
+                                A special sweet treat from our kitchen.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="declicious.2.jpg"
+                            alt="Indian Sweet"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Indian Sweet Delight</h3>
+
+                            <p>
+                                Traditional sweetness with rich flavour.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="declicious.4.jpg"
+                            alt="Dessert Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Dessert Delight</h3>
+
+                            <p>
+                                The perfect ending to your meal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="food-item image-frame">
+
+                        <img src="sweet 3.jpg"
+                            alt="Sweet Special"
+                            class="zoom-image">
+
+                        <div class="food-info">
+
+                            <h3>Sweet Special</h3>
+
+                            <p>
+                                Freshly prepared and beautifully served.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BRANCHES ================= -->
+
+        <section class="content-section branches-section">
+
+            <div class="section-title">
+
+                <h2>OUR BRANCHES</h2>
+
+                <h1>
+                    Serving Happiness Across Cities
+                </h1>
+
+            </div>
+
+
+            <div class="branch-grid">
+
+                <div class="branch-item image-frame">
+
+                    <img
+                        src="ChatGPT Image Sep 22, 2026, 01_42_29 PM.png"
+                        alt="Crazy Cravings Vijayawada"
+                        class="zoom-image">
+
+                    <div class="branch-info">
+
+                        <h3>Vijayawada</h3>
+
+                        <p>
+                            Our Vijayawada branch brings the
+                            signature Crazy Cravings experience
+                            to food lovers.
+                        </p>
+
+                        <span>
+                            Fresh Food • Warm Hospitality
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="branch-item image-frame">
+
+                    <img
+                        src="ChatGPT Image Sep 22, 2026, 01_42_09 PM.png"
+                        alt="Crazy Cravings Hyderabad"
+                        class="zoom-image">
+
+                    <div class="branch-info">
+
+                        <h3>Hyderabad</h3>
+
+                        <p>
+                            Enjoy delicious Indian flavours in the
+                            heart of Hyderabad.
+                        </p>
+
+                        <span>
+                            Taste • Tradition • Happiness
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="branch-item image-frame">
+
+                    <img
+                        src="resturant.jpeg"
+                        alt="Crazy Cravings Bangalore"
+                        class="zoom-image">
+
+                    <div class="branch-info">
+
+                        <h3>Bangalore</h3>
+
+                        <p>
+                            A welcoming place for families, friends
+                            and food lovers.
+                        </p>
+
+                        <span>
+                            Delicious Food • Beautiful Moments
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="branch-item image-frame">
+
+                    <img
+                        src="ChatGPT Image Sep 22, 2026, 01_43_06 PM.png"
+                        alt="Crazy Cravings Chennai"
+                        class="zoom-image">
+
+                    <div class="branch-info">
+
+                        <h3>Chennai</h3>
+
+                        <p>
+                            Experience our delicious menu and
+                            friendly hospitality in Chennai.
+                        </p>
+
+                        <span>
+                            Fresh Ingredients • Great Taste
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REVIEWS ================= -->
+
+        <section class="content-section reviews-section">
+
+            <div class="section-title">
+
+                <h2>CUSTOMER REVIEWS</h2>
+
+                <h1>
+                    What Our Customers Say
+                </h1>
+
+            </div>
+
+
+            <div class="review-grid">
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The food was absolutely delicious and the
+                        service was wonderful. A beautiful place
+                        for a family meal."
+                    </p>
+
+                    <h3>Priya</h3>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The flavours were amazing and everything
+                        tasted fresh. I really enjoyed the
+                        experience."
+                    </p>
+
+                    <h3>Rahul</h3>
+
+                </div>
+
+
+                <div class="review-card">
+
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "A lovely restaurant with great food,
+                        friendly service and a comfortable
+                        atmosphere."
+                    </p>
+
+                    <h3>Ananya</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINAL MESSAGE ================= -->
+
+        <section class="content-section final-message">
+
+            <h2>
+                Come Hungry. Leave Happy.
+            </h2>
+
+            <p>
+                Thank you for choosing Crazy Cravings.
+                We look forward to serving you.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-box footer-brand">
+
+                <h3>
+                    Crazy Cravings
+                </h3>
+
+                <p>
+                    Delicious Taste • Fresh Ingredients •
+                    Happy Moments
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-box">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="home.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="/menu">
+                    Menu
+                </a>
+
+                <a href="chef.html">
+                    Chef
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-box">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="booking.html">
+                    Book a Table
+                </a>
+
+                <a href="order.html">
+                    Order Online
+                </a>
+
+                <a href="booking.html">
+                    Catering
+                </a>
+
+                <a href="rating.html">
+                    Rating
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-box">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Vijayawada, Andhra Pradesh
+                </p>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    crazycravings@gmail.com
+                </p>
+
+                <p>
+                    10:00 AM - 11:00 PM
+                </p>
+
+            </div>
+
+
+            <!-- FOLLOW US -->
+
+            <div class="footer-box follow-box">
+
+                <h3>
+                    Follow Us
+                </h3>
+
+                <p>
+                    Follow Crazy Cravings for delicious updates,
+                    special dishes and restaurant moments.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= FOOTER BOTTOM ================= -->
+
+        <div class="footer-bottom">
+
+            <div class="footer-copyright">
+
+                <p>
+                    © 2026 Crazy Cravings.
+                    All Rights Reserved.
+                </p>
+
+            </div>
+
+
+            <div class="resource-links">
+
+                <a href="Refund.html">
+                    Refund Policy
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="Terms.html">
+                    Terms &amp; Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= AUTHENTICATION ================= -->
+
+    <div
+        class="auth-overlay"
+        id="authOverlay"
+        hidden>
+
+        <div class="auth-card">
+
+            <button
+                type="button"
+                class="auth-close"
+                id="authClose"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+
+            <div class="auth-header">
+
+                <div
+                    class="auth-avatar-large"
+                    id="authAvatarLarge">
+
+                    ?
+
+                </div>
+
+
+                <h2 id="authTitle">
+                    Sign In
+                </h2>
+
+
+                <p id="authSubtitle">
+                    Sign in to your Crazy Cravings account.
+                </p>
+
+            </div>
+
+
+            <div
+                class="auth-error"
+                id="authError">
+            </div>
+
+
+            <!-- ================= SIGN IN ================= -->
+
+            <form
+                id="signInForm"
+                class="auth-form">
+
+                <label for="signInEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="signInEmail"
+                    autocomplete="email"
+                    placeholder="Enter your mail ID"
+                    required>
+
+
+                <label for="signInPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="signInPassword"
+                    autocomplete="current-password"
+                    placeholder="Enter your password"
+                    required>
+
+
+                <div class="auth-preview-row">
+
+                    <span>
+                        Your icon
+                    </span>
+
+                    <strong id="signInPreview">
+                        ?
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit">
+
+                    Sign In
+
+                </button>
+
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        id="showSignUp">
+
+                        Create Account
+
+                    </button>
+
+                </p>
+
+            </form>
+
+
+            <!-- ================= SIGN UP ================= -->
+
+            <form
+                id="signUpForm"
+                class="auth-form"
+                hidden>
+
+                <label for="signUpFirstName">
+                    First Name
+                </label>
+
+                <input
+                    type="text"
+                    id="signUpFirstName"
+                    autocomplete="given-name"
+                    placeholder="Enter your first name"
+                    required>
+
+
+                <label for="signUpSurname">
+                    Surname
+                </label>
+
+                <input
+                    type="text"
+                    id="signUpSurname"
+                    autocomplete="family-name"
+                    placeholder="Enter your surname (optional)">
+
+
+                <label for="signUpEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="signUpEmail"
+                    autocomplete="email"
+                    placeholder="Enter your mail ID"
+                    required>
+
+
+                <label for="signUpPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="signUpPassword"
+                    autocomplete="new-password"
+                    placeholder="Enter your password"
+                    required>
+
+
+                <label for="signUpConfirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="signUpConfirmPassword"
+                    autocomplete="new-password"
+                    placeholder="Confirm your password"
+                    required>
+
+
+                <div class="auth-preview-row">
+
+                    <span>
+                        Your icon
+                    </span>
+
+                    <strong id="signUpPreview">
+                        ?
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit">
+
+                    Create Account
+
+                </button>
+
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        id="showSignIn">
+
+                        Sign In
+
+                    </button>
+
+                </p>
+
+            </form>
+
+
+            <!-- ================= SUCCESS ================= -->
+
+            <div
+                class="auth-success"
+                id="authSuccess"
+                hidden>
+
+                <h3 id="successTitle">
+                    Successfully created your account!
+                </h3>
+
+                <p>
+                    This is your mail ID:
+                    <strong id="successEmail"></strong>
+                </p>
+
+                <p>
+                    This is your icon:
+                    <strong id="successInitials"></strong>
+                </p>
+
+                <button
+                    type="button"
+                    class="auth-submit"
+                    id="authHomeButton">
+
+                    Go to Home
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= IMAGE MODAL ================= -->
+
+    <div
+        class="image-modal"
+        id="imageModal"
+        hidden>
+
+        <button
+            type="button"
+            class="modal-close"
+            id="modalClose"
+            aria-label="Close Image">
+
+            ×
+
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Expanded food image">
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="home.js"></script>
+
+</div>
+
+</body>
+
+</html>
